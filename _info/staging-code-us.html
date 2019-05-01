@@ -1,0 +1,1007 @@
+<script type="text/javascript" xml="space">// <![CDATA[
+require([
+  'jquery',
+  'slick'
+  ], function ($) {
+$(document).ready(function(){
+  $('#testimonialsSlider').slick({
+    dots: false,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    fade: true,
+    speed: 1200,
+    // cssEase: 'ease-in-out',
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    swipe: true
+  }); // testimonials slider
+  $('#ingredientsDesc').slick({
+    fade: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    asNavFor: '#ingredientsSlider'
+  });
+  $('#ingredientsSlider').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    asNavFor: '#ingredientsDesc',
+    dots: false,
+    focusOnSelect: true
+  });
+}); //doc ready
+}); //require
+]]></script>
+<style xml="space"><!--
+.content-wrapper {
+  font-weight: 300;
+  max-width: 1280px;
+  margin: 0 auto;
+  line-height: 1.4;
+  background: #FFFFFF;
+}
+
+.content-wrapper .row {
+  margin: 0;
+}
+
+.content-wrapper .column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.content-wrapper .block-title {
+  text-align: center;
+  margin: 0;
+}
+
+.content-wrapper .widget .block-title > strong {
+  font-size: 4rem;
+  line-height: 1.5rem;
+  font-weight: 300;
+}
+
+.content-wrapper .block.widget .products-grid .product-item {
+  margin: 0;
+}
+
+.content-wrapper .widget.block-products-list .add-button {
+  font-weight: 400;
+}
+
+.content-wrapper .widget.block-products-list .add-button:hover {
+  background: #00388D;
+  border: 1px solid #00388D;
+  color: #fff;
+}
+
+.content-wrapper .product-item-link {
+  text-transform: none;
+}
+
+.content-wrapper .widget.block-products-list .product-item-name {
+  height: 52px;
+}
+
+.content-wrapper .price-wrapper {
+  font-weight: 400;
+}
+
+.content-wrapper h1 {
+  font-size: 6rem;
+  line-height: 1.3;
+}
+
+.content-wrapper h2 {
+  font-size: 5rem;
+  line-height: 1.3;
+}
+
+.content-wrapper h3 {
+  font-size: 3.5rem;
+  line-height: 1.3;
+}
+
+.content-wrapper h4 {
+  font-size: 4rem;
+  line-height: 1.4;
+  font-weight: 300;
+}
+
+.content-wrapper h5 {
+  font-size: 3rem;
+  line-height: 1.4;
+  font-weight: 300;
+  margin-top: 2.6rem;
+  margin-bottom: .4rem;
+}
+
+.content-wrapper h6 {
+  font-size: 2rem;
+  line-height: 1.4;
+  font-weight: 300;
+}
+
+.content-wrapper p {
+  font-size: 1.8rem;
+  line-height: 1.4;
+}
+
+.content-wrapper a {
+  text-decoration: none;
+  color: #424649;
+  cursor: pointer;
+}
+
+.content-wrapper button {
+  color: #424649;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: none;
+  border: 1px solid #424649;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-top: 2rem;
+}
+
+.content-wrapper li {
+  font-size: 1.6rem;
+}
+
+.content-wrapper .cta {
+  font-weight: 400;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-top: 2rem;
+}
+
+.content-wrapper .cta:hover {
+  text-decoration: underline;
+}
+
+.content-wrapper .slick-list {
+  margin-left: -1.8rem;
+}
+
+.content-wrapper .slick-prev, .content-wrapper .slick-next {
+  font-size: 0;
+}
+
+.content-wrapper .slick-prev:before, .content-wrapper .slick-next:before {
+  color: none;
+}
+
+.content-wrapper .slick-arrow {
+  border: none;
+}
+
+.content-wrapper .linkCTA {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@-webkit-keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.content-wrapper h3 {
+  font-size: 3.5rem;
+}
+
+.content-wrapper h4 {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.content-wrapper h5 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.content-wrapper .button-cta {
+  font-size: 2rem;
+  font-weight: 400;
+  background-color: #424649;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 1rem 3rem;
+  border: 1px solid #888;
+}
+
+.content-wrapper .button-cta:hover {
+  background-color: #BDBDBD;
+}
+
+.content-wrapper .clearfix {
+  display: block;
+}
+
+.content-wrapper .clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+* html .content-wrapper .clearfix {
+  height: 1px;
+}
+
+#hero {
+  position: relative;
+}
+
+#hero .hero-img {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#hero .heroBox {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  width: 60%;
+  text-align: left;
+  color: #FFFFFF;
+}
+
+#hero .heroBox h1 {
+  margin-top: 0;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+#hero .heroBox h3 {
+  margin-bottom: 4rem;
+}
+
+#howTo {
+  margin-bottom: 6rem;
+  position: relative;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+}
+
+#howTo .howTo-productDesc, #howTo .howTo-text {
+  padding-left: 10%;
+  position: relative;
+  width: 68%;
+  z-index: 100;
+}
+
+#howTo .howTo-productDesc h5, #howTo .howTo-text h5 {
+  width: 80%;
+}
+
+#howTo .howTo-text h2 {
+  width: 90%;
+}
+
+#howTo .howTo-img {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 67%;
+  z-index: 1;
+}
+
+#testimonials {
+  padding-top: 3rem;
+  margin-bottom: 8rem;
+  position: relative;
+}
+
+#testimonials .testimonials-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+#testimonials .quotes {
+  position: relative;
+  margin: 0 auto;
+  padding-top: 4rem;
+  width: 10%;
+  z-index: 101;
+}
+
+#testimonialsSlider {
+  width: 89%;
+  margin: -4.5rem auto 0 auto;
+  text-align: center;
+  z-index: 102;
+}
+
+#testimonialsSlider .slick-prev::before, #testimonialsSlider .slick-next::before {
+  font-size: 9rem;
+}
+
+#testimonialsSlider .slick-prev {
+  left: 40px;
+}
+
+#testimonialsSlider .slick-next {
+  right: 60px;
+}
+
+#testimonialsSlider .testimonial {
+  display: inline;
+  padding: 2rem 0;
+}
+
+#testimonialsSlider .testimonial h5 {
+  margin: 1rem auto 0 auto;
+  width: 70%;
+}
+
+#testimonialsSlider .testimonial blockquote {
+  font-weight: 300;
+  font-size: 1.7rem;
+  margin: 2rem auto 0 auto;
+  text-align: center;
+}
+
+#testimonialsSlider .testimonial blockquote span {
+  font-weight: 400;
+}
+
+#ingredients {
+  position: relative;
+}
+
+#ingredients .ingredients-waterImg {
+  padding-top: 8rem;
+  height: 200px;
+}
+
+#ingredients .ingredients-wrapper {
+  position: relative;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(30%, #d4eff1), color-stop(70%, #d4eff1), to(white));
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #d4eff1 30%, #d4eff1 70%, white 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #d4eff1 30%, #d4eff1 70%, white 100%);
+}
+
+#ingredients .ingredients-wrapper .ingredients-box {
+  text-align: center;
+  margin: -1rem auto 4rem auto;
+  width: 80%;
+  background-color: #FFF;
+  border: 1px solid #888;
+}
+
+#ingredients .ingredients-wrapper .ingredients-box h2 {
+  padding-top: 30px;
+  margin-bottom: 0;
+}
+
+#ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc {
+  margin: 0 auto;
+  width: 80%;
+  background-color: #FFF;
+}
+
+#ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc .ingredientImg {
+  margin: 0 40px;
+  float: left;
+  display: inline-block;
+}
+
+#ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc img {
+  width: 320px;
+}
+
+#ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc .ingredientDesc-long {
+  text-align: left;
+  margin: 0 auto;
+  padding-top: 4rem;
+  width: 75%;
+}
+
+#ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc .ingredientDesc-long h3 {
+  margin-bottom: 0.5rem;
+}
+
+#ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc .ingredientDesc-long span {
+  font-weight: 400;
+  margin: 0 0 18px 0;
+}
+
+#ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc .slick-prev, #ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc .slick-next {
+  margin-top: 19rem;
+}
+
+#ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc .slick-prev::before, #ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc .slick-next::before {
+  font-size: 9rem;
+}
+
+#ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc .slick-prev {
+  left: 120px;
+}
+
+#ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc .slick-next {
+  right: 120px;
+}
+
+#ingredients .ingredients-wrapper .ingredients-box #ingredientsSlider {
+  margin: 0 auto;
+  width: 50%;
+}
+
+#ingredients .ingredients-wrapper .ingredients-box #ingredientsSlider .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+#ingredients .ingredients-wrapper .ingredients-box #ingredientsSlider .ingredient {
+  margin: 0 1rem;
+  width: 80px !important;
+  opacity: .3;
+}
+
+#ingredients .ingredients-wrapper .ingredients-box #ingredientsSlider .slick-current {
+  opacity: 1;
+}
+
+#ingredients .ingredients-wrapper .waterBubbles-left {
+  position: absolute;
+  top: 14rem;
+  left: -1rem;
+  width: 11%;
+}
+
+#ingredients .ingredients-wrapper .waterBubbles-right {
+  position: absolute;
+  bottom: 38rem;
+  right: 2rem;
+  width: 13%;
+}
+
+#ingredients .ingredients-wrapper #info {
+  position: relative;
+  margin: 0 auto 6rem auto;
+  text-align: center;
+  width: 70%;
+}
+
+#ingredients .ingredients-wrapper #info p {
+  margin-bottom: 4rem;
+}
+
+#ingredients .ingredients-wrapper #video {
+  margin: 0 auto;
+  width: 82%;
+}
+
+#ingredients .ingredients-wrapper #videoModal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 3rem;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+#ingredients .ingredients-wrapper #videoModal .modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: 0 auto;
+  width: 86%;
+  padding: 4%;
+  border: 1px solid #888;
+  height: 500px;
+}
+
+#ingredients .ingredients-wrapper #videoModal .modal-content #ytVideo {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 4rem;
+  max-width: 100%;
+  max-height: 480px;
+}
+
+#ingredients .ingredients-wrapper #videoModal .modal-content .close {
+  position: absolute;
+  top: 1%;
+  right: 2%;
+  color: #aaaaaa;
+  font-size: 28px;
+  font-weight: bold;
+  z-index: 1010;
+}
+
+#ingredients .ingredients-wrapper #videoModal .modal-content .close:hover, #ingredients .ingredients-wrapper #videoModal .modal-content .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#blog {
+  position: relative;
+}
+
+#blog .blog-img {
+  position: relative;
+  width: 50%;
+}
+
+#blog .blog-text {
+  position: absolute;
+  top: 20%;
+  right: 0;
+  padding-right: 8%;
+  width: 50%;
+}
+
+#blog .blog-text .blog-link {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 649px) {
+  .content-wrapper h1 {
+    font-size: 4.5rem;
+  }
+  .content-wrapper h2 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+  .content-wrapper h5 {
+    font-size: 2rem;
+    margin-top: 1.4rem;
+  }
+  .content-wrapper .slick-list {
+    margin: 0 auto;
+  }
+  #hero .heroBox {
+    position: absolute;
+    top: 60%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 6%;
+  }
+  #hero .heroBox h3 {
+    margin-bottom: 3rem;
+    font-size: 2rem;
+  }
+  #howTo {
+    text-align: center;
+  }
+  #howTo .howTo-productDesc, #howTo .howTo-text {
+    padding-left: unset;
+    width: 96%;
+    margin: 0 auto;
+  }
+  #howTo .howTo-productDesc h2, #howTo .howTo-text h2 {
+    margin: 0 auto;
+  }
+  #howTo .howTo-productDesc {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+  #howTo .howTo-productDesc h5 {
+    width: 100%;
+  }
+  #howTo .howTo-text {
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3;
+  }
+  #howTo .howTo-text h5 {
+    width: 100%;
+  }
+  #howTo .howTo-img {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    position: relative;
+    top: unset;
+    right: unset;
+    width: 100%;
+  }
+  #testimonials {
+    margin-bottom: 0;
+  }
+  #testimonials .quotes {
+    width: 24%;
+    padding-top: 0;
+    margin-top: 2rem;
+    margin-bottom: 1.8rem;
+  }
+  #testimonialsSlider {
+    margin-top: -2rem;
+    width: 98%;
+  }
+  #testimonialsSlider .slick-prev {
+    left: -36px;
+  }
+  #testimonialsSlider .slick-next {
+    right: -10px;
+  }
+  #testimonialsSlider .testimonial h3 {
+    margin-top: 1.4rem;
+    font-size: 3rem;
+    width: 82%;
+    margin: 0 auto;
+  }
+  #testimonialsSlider .testimonial h5 {
+    width: 86%;
+  }
+  #ingredients {
+    margin-top: -2rem;
+  }
+  #ingredients .ingredients-waterImg {
+    padding-top: 0;
+    height: unset;
+  }
+  #ingredients .ingredients-wrapper {
+    margin-top: -11.5rem;
+  }
+  #ingredients .ingredients-wrapper .ingredients-box h2 {
+    padding-top: 0;
+  }
+  #ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc {
+    width: 100%;
+  }
+  #ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc .ingredientDesc-long {
+    padding-top: unset;
+    text-align: center;
+  }
+  #ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc .ingredientDesc-long .ingredientImg {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc .ingredientDesc-long .ingredientImg img {
+    width: 280px;
+  }
+  #ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc .ingredientDesc-long .ingredient-text {
+    margin: -2rem auto 0 auto;
+    width: 90%;
+  }
+  #ingredients .ingredients-wrapper .ingredients-box #ingredientsSlider {
+    width: 92%;
+  }
+  #ingredients .ingredients-wrapper .ingredients-box #ingredientsSlider .slick-track {
+    margin-bottom: 2rem;
+  }
+  #ingredients .ingredients-wrapper #info {
+    width: 90%;
+  }
+  #ingredients .ingredients-wrapper #video {
+    width: 100%;
+  }
+  #ingredients .ingredients-wrapper #videoModal {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 0;
+  }
+  #ingredients .ingredients-wrapper #videoModal .modal-content {
+    width: 100%;
+    height: auto;
+    background: none;
+    border: none;
+  }
+  #ingredients .ingredients-wrapper #videoModal .modal-content #ytVideo {
+    position: unset;
+    padding: 0;
+    width: 100%;
+    max-width: 600px;
+    max-height: 338px;
+  }
+  #ingredients .ingredients-wrapper #videoModal .modal-content .close {
+    top: unset;
+    right: unset;
+    position: relative;
+    float: right;
+    margin: 0;
+    padding: 0 10px;
+    line-height: 1;
+    color: #BDBDBD;
+    font-size: 5rem;
+  }
+  #blog .blog-img {
+    width: 100%;
+  }
+  #blog .blog-text {
+    position: relative;
+    top: unset;
+    right: unset;
+    padding-right: 0;
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+  }
+  #blog .blog-text h2 {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 459px) {
+  #hero .heroBox {
+    top: 46%;
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+  #howTo .howTo-productDesc h2, #howTo .howTo-text h2 {
+    font-size: 3.2rem;
+  }
+}
+
+@media only screen and (min-width: 650px) and (max-width: 1024px) {
+  .content-wrapper h3 {
+    font-size: 3rem;
+  }
+  .content-wrapper h5 {
+    font-size: 1.8rem;
+  }
+  .content-wrapper .button-cta {
+    font-size: 1.6rem;
+    padding: .6rem 2rem;
+  }
+  #howTo {
+    margin-bottom: 4rem;
+  }
+  #howTo .howTo-img {
+    top: 8%;
+  }
+  #testimonials {
+    padding-top: 1.8rem;
+    margin-bottom: 6rem;
+  }
+  #testimonials .quotes {
+    margin-bottom: 1rem;
+    width: 8%;
+  }
+  #ingredients .ingredients-wrapper .ingredients-box {
+    margin-top: -3rem;
+  }
+  #ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc {
+    width: 90%;
+  }
+  #ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc .ingredientImg {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (min-width: 650px) and (max-width: 850px) {
+  .content-wrapper h2 {
+    font-size: 4rem;
+    line-height: 1.1;
+  }
+  #hero .heroBox {
+    top: 34%;
+  }
+  #hero .heroBox h3 {
+    font-size: 2rem;
+  }
+  #howTo .howTo-img {
+    top: 20%;
+  }
+  #testimonials .quotes {
+    padding-top: 2rem;
+  }
+  #testimonialsSlider .testimonial h3 {
+    margin-top: 0.5rem;
+    font-size: 2.6rem;
+  }
+  #ingredients .ingredients-waterImg {
+    padding-top: 1rem;
+  }
+  #ingredients .ingredients-wrapper .ingredients-box {
+    margin-top: -14rem;
+    width: 86%;
+  }
+  #ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc img {
+    width: 240px;
+  }
+  #ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc .ingredientDesc-long {
+    padding-top: 0;
+  }
+  #ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc .ingredientDesc-long .ingredientImg {
+    margin-right: 1rem;
+  }
+  #ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc .ingredientDesc-long .ingredient-text {
+    padding-top: 2rem;
+  }
+  #ingredients .ingredients-wrapper .ingredients-box #ingredientsSlider {
+    margin-bottom: 2rem;
+  }
+  #ingredients .ingredients-wrapper #video {
+    width: 100%;
+  }
+  #blog .blog-text {
+    top: 0;
+    padding-right: 0;
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 650px) and (max-width: 699px) {
+  #hero .heroBox {
+    top: 58%;
+  }
+}
+--></style>
+<div class="content-wrapper"><section id="hero">
+<div class="hero-img"><picture> <source srcset="/media/wysiwyg/content/product/astax/astaxanthin-hero-m.jpg" media="(max-width: 459px)" /> <source srcset="/media/wysiwyg/content/product/astax/astaxanthin-hero-bigger-m.jpg" media="(max-width: 699px)" /> <img src="/media/wysiwyg/content/product/astax/astaxanthin-hero.jpg" alt="DHC Astaxanthin Collagen All-in-One Gel" /> </picture></div>
+<div class="heroBox">
+<h1>All-in-One Wonder</h1>
+<h3>Brighter, firmer skin that glows.<br />All from one high-performance gel.</h3>
+<p><a class="button-cta" href="/astaxanthin-collagen-all-in-one-gel.html">shop now</a></p>
+</div>
+</section><!-- hero --><section id="howTo">
+<div class="howTo-productDesc">
+<h2>Astaxanthin Collagen<br />All-in-One Gel</h2>
+<h5>Discover how this powerful botanical ingredient delivers next-level antioxidant protection in a brightening, moisturizing gel.</h5>
+</div>
+<!-- product description -->
+<div class="howTo-text">
+<h2>Rethink Your Routine</h2>
+<h5>For a daily lift of intensive, long-lasting moisture, smooth on this creamy gel to tone, hydrate and brighten in one step.</h5>
+</div>
+<div class="howTo-img"><picture> <source srcset="/media/wysiwyg/content/product/astax/how-to-m.jpg" media="(max-width: 649px)" /> <img src="/media/wysiwyg/content/product/astax/how-to.jpg" alt="" /> </picture></div>
+<!-- <div class="clearfix"></div> --></section><!-- how to --><section id="testimonials">
+<div class="testimonials-img"><picture> <source srcset="/media/wysiwyg/content/product/astax/testimonials-m.jpg" media="(max-width: 649px)" /> <img src="/media/wysiwyg/content/product/astax/testimonials.jpg" alt="astaxanthin testimonials" /> </picture></div>
+<div class="quotes"><img src="/media/wysiwyg/content/product/astax/quote-marks.svg" alt="testimonial quotation marks" /></div>
+<div id="testimonialsSlider">
+<div class="testimonial one">
+<h3>Absolute BEST!</h3>
+<h5>This cream is amazing! I have noticed a HUGE difference in elasticity, fine lines (gone!) and overall texture of my skin. This is my GO TO cream and I highly recommend it!</h5>
+<blockquote><span>Connie57</span>,<br />Illinois</blockquote>
+</div>
+<div class="testimonial two">
+<h3>Really hydrating!</h3>
+<h5>Hydrated my skin after 1 day using a sample. I could feel and see the difference. Brighter, softer, dewier skin! I LOVE IT!</h5>
+<blockquote><span>Bliss_Omm</span>,<br />Maryland</blockquote>
+</div>
+<div class="testimonial three">
+<h3>Rich but not heavy.</h3>
+<h5>My skin is visibly smoother using this product. A definite difference in the appearance of my skin.</h5>
+<blockquote><span>Mamacita</span>,<br />Oregon</blockquote>
+</div>
+<div class="testimonial four">
+<h3>The perfect &rsquo;all in one&rsquo;</h3>
+<h5>I travel a lot, and finding a product which deeply moisturizes and is applied in one step is a gift!</h5>
+<blockquote><span>LeGS</span>,<br />Tennessee</blockquote>
+</div>
+<div class="testimonial five">
+<h3>Easiest way to keep skin looking good all day.</h3>
+<h5>This product has made me a believer in the advantages of gels; it smoothes on, absorbs quickly and stays all day allowing a soft glow. Quick and effective!</h5>
+<blockquote><span>Gymchick</span>,<br />Maryland</blockquote>
+</div>
+</div>
+<!-- testimonials Slider --></section><!-- testimonials --><section id="ingredients">
+<div class="ingredients-waterImg"><picture> <source srcset="/media/wysiwyg/content/product/astax/ingredients-water-m.jpg" media="(max-width: 649px)" /> <img src="/media/wysiwyg/content/product/astax/ingredients-water.jpg" alt="water" /> </picture></div>
+<div class="ingredients-wrapper">
+<div class="ingredients-box">
+<h2>What&rsquo;s in It</h2>
+<div id="ingredientsDesc">
+<div class="ingredientDesc-long">
+<div class="ingredientImg"><picture> <source srcset="/media/wysiwyg/content/product/astax/astaxanthin-m.jpg" media="(max-width: 649px)" /> <img src="/media/wysiwyg/content/product/astax/astaxanthin.jpg" alt="Astaxanthin" /> </picture></div>
+<div class="ingredient-text">
+<h3>Astaxanthin</h3>
+<p><span>Antioxidant</span></p>
+<p>Derived from freshwater algae and micronized for fast absorption, astaxanthin helps skin retain moisture and protects it from environmental damage.</p>
+</div>
+</div>
+<div class="ingredientDesc-long">
+<div class="ingredientImg"><picture> <source srcset="/media/wysiwyg/content/product/astax/vitamin-e-m.jpg" media="(max-width: 649px)" /> <img src="/media/wysiwyg/content/product/astax/vitamin-e.jpg" alt="Vitamin E" /> </picture></div>
+<div class="ingredient-text">
+<h3>Vitamin E</h3>
+<p><span>Antioxidant, skin conditioner</span></p>
+<p>Helps prevent the signs of premature aging by protecting skin against environmental pollution.</p>
+</div>
+</div>
+<div class="ingredientDesc-long">
+<div class="ingredientImg"><picture> <source srcset="/media/wysiwyg/content/product/astax/hydrolyzed-collagen-m.jpg" media="(max-width: 649px)" /> <img src="/media/wysiwyg/content/product/astax/hydrolyzed-collagen.jpg" alt="Hydrolyzed Collagen" /> </picture></div>
+<div class="ingredient-text">
+<h3>Hydrolyzed Collagen</h3>
+<p><span>Hydration booster, moisturizer</span></p>
+<p>Skin-firming collagen is processed into ultra-tiny peptides, making it more easily absorbed and leaving skin feeling soft and supple.</p>
+</div>
+</div>
+<div class="ingredientDesc-long">
+<div class="ingredientImg"><picture> <source srcset="/media/wysiwyg/content/product/astax/squalane-m.jpg" media="(max-width: 649px)" /> <img src="/media/wysiwyg/content/product/astax/squalane.jpg" alt="Squalane" /> </picture></div>
+<div class="ingredient-text">
+<h3>Squalane</h3>
+<p><span>Moisturizer, skin soother</span></p>
+<p>Derived from olives, squalane is an emollient and antioxidant-rich skin protectant.</p>
+</div>
+</div>
+</div>
+<!-- ingredient descriptions -->
+<div id="ingredientsSlider">
+<div class="ingredient"><img src="/media/wysiwyg/content/product/astax/astaxanthin-th.jpg" alt="astaxanthin thumbnail" /></div>
+<div class="ingredient"><img src="/media/wysiwyg/content/product/astax/vitamin-e-th.jpg" alt="vitamin-e thumbnail" /></div>
+<div class="ingredient"><img src="/media/wysiwyg/content/product/astax/hydrolyzed-collagen-th.jpg" alt="hydrolyzed collagen thumbnail" /></div>
+<div class="ingredient"><img src="/media/wysiwyg/content/product/astax/squalane-th.jpg" alt="squalane thumbnail" /></div>
+</div>
+</div>
+<!-- ingredients box -->
+<div class="waterBubbles-left"><img src="/media/wysiwyg/content/product/astax/top-bubbles.png" alt="bubbles in water" /></div>
+<div class="waterBubbles-right"><img src="/media/wysiwyg/content/product/astax/top-bubbles.png" alt="bubbles in water" /></div>
+<div id="info">
+<h2>Discover Nature&rsquo;s Pink Powerhouse</h2>
+<p>Astaxanthin has emerged as a breakthrough ingredient in modern skincare. This high-performance antioxidant is 6,000 times more effective than vitamin C and 550 times more powerful than vitamin E in eliminating free radicals that cause premature aging. We&rsquo;ve micronized it for instant absorption and blended it with complexion boosters like hydrolyzed collagen to firm and smooth, vitamin E to protect, and sodium hyaluronate to nourish.</p>
+<p><a class="button-cta" href="/astaxanthin-collagen-all-in-one-gel.html">shop now</a></p>
+</div>
+<!-- info -->
+<div id="video"><picture> <source srcset="/media/wysiwyg/content/product/astax/astax-video-m.jpg" media="(max-width: 649px)" /> <img src="/media/wysiwyg/content/product/astax/astax-video.jpg" alt="Video - What The Experts Are Saying." /> </picture></div>
+<!-- video banner -->
+<div id="videoModal" class="modal">
+<div class="modal-content"><span class="close">&times;</span> <!-- <p>Some text in the Modal..</p> --> <iframe id="ytVideo" src="https://www.youtube.com/embed/8AOciuyKIqs?rel=0" width="853" height="480" frameborder="0" allowfullscreen=""></iframe></div>
+<!-- Modal content --></div>
+<!-- video modal -->
+<script type="text/javascript" xml="space">// <![CDATA[
+          var modal = document.getElementById('videoModal');
+          var yt = document.getElementById("ytVideo");
+          var openVid = document.getElementById("video");
+          var span = document.getElementsByClassName("close")[0];
+
+          openVid.onclick = function() {
+            openVid.style.display = "none";
+            modal.style.display = "block";
+            yt.style.display = "inline-block";
+          }
+          span.onclick = function() {
+            modal.style.display = "none";
+            openVid.style.display = "inherit";
+          }
+          window.onclick = function(event) {
+            if (event.target == modal) {
+              modal.style.display = "none";
+              openVid.style.display = "inherit";
+            }
+          }
+ ]]></script>
+</div>
+<!-- ingredients wrapper --></section><!-- ingredients --><section id="blog">
+<div class="blog-img"><picture> <source srcset="/media/wysiwyg/content/product/astax/antioxidant-blog-m.jpg" media="(max-width: 649px)" /> <img src="/media/wysiwyg/content/product/astax/antioxidant-blog.jpg" alt="Why Do I Need Antioxidants? Read More." /> </picture></div>
+<div class="blog-text">
+<h2>Why Do I Need Antioxidants?</h2>
+<p>Learn more about these powerful skin protectors and why they matter to the health and beauty of your complexion.</p>
+<p><a class="blog-link" href="/blog/what-are-antioxidants-for-skin/">Read More &gt;</a></p>
+</div>
+</section></div>
+<!-- content wrapper -->

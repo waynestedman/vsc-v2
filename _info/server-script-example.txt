@@ -1,0 +1,41 @@
+<script type="text/javascript" xml="space">// <![CDATA[
+require([
+  'jquery',
+  'slick'
+  ], function ($) {
+$(document).ready(function(){
+  $('#testimonialsSlider').slick({
+    dots: false,
+    focusOnChange: true,
+    speed: 1200,
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    swipe: true,
+    responsive: [
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true
+        }
+      }
+    ]
+  }); // testimonials slider
+  $('#usesSlider-imgs').slick({
+   slidesToShow: 1,
+   slidesToScroll: 1,
+   arrows: false,
+   asNavFor: '#usesSlider-text'
+  });
+  $('#usesSlider-text').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    asNavFor: '#usesSlider-imgs',
+    dots: true,
+    focusOnSelect: true
+  });
+}); // doc ready
+}); //require
+// ]]></script>
