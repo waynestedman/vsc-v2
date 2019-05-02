@@ -176,6 +176,52 @@ body {
   text-transform: uppercase;
 }
 
+/* Image Comparison related */
+.img-comp-container {
+  position: relative;
+  width: 691px;
+  height: 400px;
+  /* same height as the images*/
+}
+
+.img-comp-img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  float: right;
+  flex-basis: auto;
+}
+
+.img-comp-img img {
+  display: block;
+  vertical-align: middle;
+  height: 400px;
+  max-width: inherit;
+}
+
+#slider-wrapper {
+  position: absolute;
+  z-index: 9;
+  cursor: ew-resize;
+}
+
+#img-comp-slider {
+  width: 4px;
+  height: 410px;
+  background-color: #212121;
+  opacity: 0.7;
+  margin: 38px 0 0 62px;
+  /* border-radius: 50%; */
+}
+
+#slider-text {
+  margin-top: 6px;
+  color: #212121;
+  text-transform: uppercase;
+  width: 140px;
+}
+
 @keyframes fadeEffect {
   from {
     opacity: 0;
@@ -185,29 +231,14 @@ body {
   }
 }
 
-.content-wrapper h3 {
-  font-size: 3.5rem;
-}
-
-.content-wrapper h4 {
-  font-size: 3rem;
-  font-weight: 400;
-  margin-bottom: 1rem;
-}
-
-.content-wrapper h5 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-
 .content-wrapper .button-cta {
   font-size: 2rem;
   font-weight: 400;
-  background-color: #424649;
+  background-color: #004098;
   color: #fff;
   text-transform: uppercase;
   padding: 1rem 3rem;
-  border: 1px solid #888;
+  border: 1px solid #004098;
 }
 
 .content-wrapper .button-cta:hover {
@@ -230,603 +261,9 @@ body {
   height: 1px;
 }
 
-#hero {
-  position: relative;
-}
-
-#hero .hero-img {
-  width: 100%;
-  margin: 0 auto;
-}
-
-#hero .heroBox {
-  position: absolute;
-  top: 40%;
-  left: 40%;
-  width: 60%;
-  text-align: left;
-  color: #FFFFFF;
-}
-
-#hero .heroBox h1 {
-  margin-top: 0;
-  line-height: 1.1;
-  margin-bottom: 1rem;
-}
-
-#hero .heroBox h3 {
-  margin-bottom: 4rem;
-}
-
-#howTo {
-  margin-bottom: 6rem;
-  position: relative;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-#howTo .howTo-productDesc, #howTo .howTo-text {
-  padding-left: 10%;
-  position: relative;
-  width: 68%;
-  z-index: 100;
-}
-
-#howTo .howTo-productDesc h5, #howTo .howTo-text h5 {
-  width: 80%;
-}
-
-#howTo .howTo-text h2 {
-  width: 90%;
-}
-
-#howTo .howTo-img {
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 67%;
-  z-index: 1;
-}
-
-#testimonials {
-  padding-top: 3rem;
-  margin-bottom: 8rem;
-  position: relative;
-}
-
-#testimonials .testimonials-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-}
-
-#testimonials .quotes {
-  position: relative;
-  margin: 0 auto;
-  padding-top: 4rem;
-  width: 10%;
-  z-index: 101;
-}
-
-#testimonialsSlider {
-  width: 89%;
-  margin: -4.5rem auto 0 auto;
-  text-align: center;
-  z-index: 102;
-}
-
-#testimonialsSlider .slick-prev::before, #testimonialsSlider .slick-next::before {
-  font-size: 9rem;
-}
-
-#testimonialsSlider .slick-prev {
-  left: 40px;
-}
-
-#testimonialsSlider .slick-next {
-  right: 60px;
-}
-
-#testimonialsSlider .testimonial {
-  display: inline;
-  padding: 2rem 0;
-}
-
-#testimonialsSlider .testimonial h5 {
-  margin: 1rem auto 0 auto;
-  width: 70%;
-}
-
-#testimonialsSlider .testimonial blockquote {
-  font-weight: 300;
-  font-size: 1.7rem;
-  margin: 2rem auto 0 auto;
-  text-align: center;
-}
-
-#testimonialsSlider .testimonial blockquote span {
-  font-weight: 400;
-}
-
-#ingredients {
-  position: relative;
-}
-
-#ingredients .ingredients-waterImg {
-  padding-top: 8rem;
-  height: 200px;
-}
-
-#ingredients .ingredients-wrapper {
-  position: relative;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #d4eff1 30%, #d4eff1 70%, white 100%);
-}
-
-#ingredients .ingredients-wrapper .ingredients-box {
-  text-align: center;
-  margin: -1rem auto 4rem auto;
-  width: 80%;
-  background-color: #FFF;
-  border: 1px solid #888;
-}
-
-#ingredients .ingredients-wrapper .ingredients-box h2 {
-  padding-top: 30px;
-  margin-bottom: 0;
-}
-
-#ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc {
-  margin: 0 auto;
-  width: 80%;
-  background-color: #FFF;
-}
-
-#ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc .ingredientImg {
-  margin: 0 40px;
-  float: left;
-  display: inline-block;
-}
-
-#ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc img {
-  width: 320px;
-}
-
-#ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc .ingredientDesc-long {
-  text-align: left;
-  margin: 0 auto;
-  padding-top: 4rem;
-  width: 75%;
-}
-
-#ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc .ingredientDesc-long h3 {
-  margin-bottom: 0.5rem;
-}
-
-#ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc .ingredientDesc-long span {
-  font-weight: 400;
-  margin: 0 0 18px 0;
-}
-
-#ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc .slick-prev, #ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc .slick-next {
-  margin-top: 19rem;
-}
-
-#ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc .slick-prev::before, #ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc .slick-next::before {
-  font-size: 9rem;
-}
-
-#ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc .slick-prev {
-  left: 120px;
-}
-
-#ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc .slick-next {
-  right: 120px;
-}
-
-#ingredients .ingredients-wrapper .ingredients-box #ingredientsSlider {
-  margin: 0 auto;
-  width: 50%;
-}
-
-#ingredients .ingredients-wrapper .ingredients-box #ingredientsSlider .slick-track {
-  display: flex;
-  justify-content: center;
-}
-
-#ingredients .ingredients-wrapper .ingredients-box #ingredientsSlider .ingredient {
-  margin: 0 1rem;
-  width: 80px !important;
-  opacity: .3;
-}
-
-#ingredients .ingredients-wrapper .ingredients-box #ingredientsSlider .slick-current {
-  opacity: 1;
-}
-
-#ingredients .ingredients-wrapper .waterBubbles-left {
-  position: absolute;
-  top: 14rem;
-  left: -1rem;
-  width: 11%;
-}
-
-#ingredients .ingredients-wrapper .waterBubbles-right {
-  position: absolute;
-  bottom: 38rem;
-  right: 2rem;
-  width: 13%;
-}
-
-#ingredients .ingredients-wrapper #info {
-  position: relative;
-  margin: 0 auto 6rem auto;
-  text-align: center;
-  width: 70%;
-}
-
-#ingredients .ingredients-wrapper #info p {
-  margin-bottom: 4rem;
-}
-
-#ingredients .ingredients-wrapper #video {
-  margin: 0 auto;
-  width: 82%;
-}
-
-#ingredients .ingredients-wrapper #videoModal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  padding-top: 3rem;
-  margin: 0 auto;
-  position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 0;
-  height: 0;
-  overflow: hidden;
-}
-
-#ingredients .ingredients-wrapper #videoModal .modal-content {
-  position: relative;
-  background-color: #fefefe;
-  margin: 0 auto;
-  width: 86%;
-  padding: 4%;
-  border: 1px solid #888;
-  height: 500px;
-}
-
-#ingredients .ingredients-wrapper #videoModal .modal-content #ytVideo {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 4rem;
-  max-width: 100%;
-  max-height: 480px;
-}
-
-#ingredients .ingredients-wrapper #videoModal .modal-content .close {
-  position: absolute;
-  top: 1%;
-  right: 2%;
-  color: #aaaaaa;
-  font-size: 28px;
-  font-weight: bold;
-  z-index: 1010;
-}
-
-#ingredients .ingredients-wrapper #videoModal .modal-content .close:hover, #ingredients .ingredients-wrapper #videoModal .modal-content .close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-#blog {
-  position: relative;
-}
-
-#blog .blog-img {
-  position: relative;
-  width: 50%;
-}
-
-#blog .blog-text {
-  position: absolute;
-  top: 20%;
-  right: 0;
-  padding-right: 8%;
-  width: 50%;
-}
-
-#blog .blog-text .blog-link {
-  text-transform: uppercase;
-  font-weight: 600;
-}
-
 @media only screen and (max-width: 649px) {
-  .content-wrapper h1 {
-    font-size: 4.5rem;
-  }
-  .content-wrapper h2 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-  }
-  .content-wrapper h5 {
-    font-size: 2rem;
-    margin-top: 1.4rem;
-  }
   .content-wrapper .slick-list {
     margin: 0 auto;
-  }
-  #hero .heroBox {
-    position: absolute;
-    top: 60%;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    margin: 0 auto;
-    padding: 0 6%;
-  }
-  #hero .heroBox h3 {
-    margin-bottom: 3rem;
-    font-size: 2rem;
-  }
-  #howTo {
-    text-align: center;
-  }
-  #howTo .howTo-productDesc, #howTo .howTo-text {
-    padding-left: unset;
-    width: 96%;
-    margin: 0 auto;
-  }
-  #howTo .howTo-productDesc h2, #howTo .howTo-text h2 {
-    margin: 0 auto;
-  }
-  #howTo .howTo-productDesc {
-    order: 1;
-  }
-  #howTo .howTo-productDesc h5 {
-    width: 100%;
-  }
-  #howTo .howTo-text {
-    order: 3;
-  }
-  #howTo .howTo-text h5 {
-    width: 100%;
-  }
-  #howTo .howTo-img {
-    order: 2;
-    position: relative;
-    top: unset;
-    right: unset;
-    width: 100%;
-  }
-  #testimonials {
-    margin-bottom: 0;
-  }
-  #testimonials .quotes {
-    width: 24%;
-    padding-top: 0;
-    margin-top: 2rem;
-    margin-bottom: 1.8rem;
-  }
-  #testimonialsSlider {
-    margin-top: -2rem;
-    width: 98%;
-  }
-  #testimonialsSlider .slick-prev {
-    left: -36px;
-  }
-  #testimonialsSlider .slick-next {
-    right: -10px;
-  }
-  #testimonialsSlider .testimonial h3 {
-    margin-top: 1.4rem;
-    font-size: 3rem;
-    width: 82%;
-    margin: 0 auto;
-  }
-  #testimonialsSlider .testimonial h5 {
-    width: 86%;
-  }
-  #ingredients {
-    margin-top: -2rem;
-  }
-  #ingredients .ingredients-waterImg {
-    padding-top: 0;
-    height: unset;
-  }
-  #ingredients .ingredients-wrapper {
-    margin-top: -11.5rem;
-  }
-  #ingredients .ingredients-wrapper .ingredients-box h2 {
-    padding-top: 0;
-  }
-  #ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc {
-    width: 100%;
-  }
-  #ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc .ingredientDesc-long {
-    padding-top: unset;
-    text-align: center;
-  }
-  #ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc .ingredientDesc-long .ingredientImg {
-    float: none;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  #ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc .ingredientDesc-long .ingredientImg img {
-    width: 280px;
-  }
-  #ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc .ingredientDesc-long .ingredient-text {
-    margin: -2rem auto 0 auto;
-    width: 90%;
-  }
-  #ingredients .ingredients-wrapper .ingredients-box #ingredientsSlider {
-    width: 92%;
-  }
-  #ingredients .ingredients-wrapper .ingredients-box #ingredientsSlider .slick-track {
-    margin-bottom: 2rem;
-  }
-  #ingredients .ingredients-wrapper #info {
-    width: 90%;
-  }
-  #ingredients .ingredients-wrapper #video {
-    width: 100%;
-  }
-  #ingredients .ingredients-wrapper #videoModal {
-    width: 100%;
-    height: 100%;
-    padding-bottom: 0;
-  }
-  #ingredients .ingredients-wrapper #videoModal .modal-content {
-    width: 100%;
-    height: auto;
-    background: none;
-    border: none;
-  }
-  #ingredients .ingredients-wrapper #videoModal .modal-content #ytVideo {
-    position: unset;
-    padding: 0;
-    width: 100%;
-    max-width: 600px;
-    max-height: 338px;
-  }
-  #ingredients .ingredients-wrapper #videoModal .modal-content .close {
-    top: unset;
-    right: unset;
-    position: relative;
-    float: right;
-    margin: 0;
-    padding: 0 10px;
-    line-height: 1;
-    color: #BDBDBD;
-    font-size: 5rem;
-  }
-  #blog .blog-img {
-    width: 100%;
-  }
-  #blog .blog-text {
-    position: relative;
-    top: unset;
-    right: unset;
-    padding-right: 0;
-    margin: 0 auto;
-    text-align: center;
-    width: 90%;
-  }
-  #blog .blog-text h2 {
-    margin-top: 0;
-  }
-}
-
-@media only screen and (max-width: 459px) {
-  #hero .heroBox {
-    top: 46%;
-    padding-left: 1%;
-    padding-right: 1%;
-  }
-  #howTo .howTo-productDesc h2, #howTo .howTo-text h2 {
-    font-size: 3.2rem;
-  }
-}
-
-@media only screen and (min-width: 650px) and (max-width: 1024px) {
-  .content-wrapper h3 {
-    font-size: 3rem;
-  }
-  .content-wrapper h5 {
-    font-size: 1.8rem;
-  }
-  .content-wrapper .button-cta {
-    font-size: 1.6rem;
-    padding: .6rem 2rem;
-  }
-  #howTo {
-    margin-bottom: 4rem;
-  }
-  #howTo .howTo-img {
-    top: 8%;
-  }
-  #testimonials {
-    padding-top: 1.8rem;
-    margin-bottom: 6rem;
-  }
-  #testimonials .quotes {
-    margin-bottom: 1rem;
-    width: 8%;
-  }
-  #ingredients .ingredients-wrapper .ingredients-box {
-    margin-top: -3rem;
-  }
-  #ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc {
-    width: 90%;
-  }
-  #ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc .ingredientImg {
-    margin-left: 0;
-  }
-}
-
-@media only screen and (min-width: 650px) and (max-width: 850px) {
-  .content-wrapper h2 {
-    font-size: 4rem;
-    line-height: 1.1;
-  }
-  #hero .heroBox {
-    top: 34%;
-  }
-  #hero .heroBox h3 {
-    font-size: 2rem;
-  }
-  #howTo .howTo-img {
-    top: 20%;
-  }
-  #testimonials .quotes {
-    padding-top: 2rem;
-  }
-  #testimonialsSlider .testimonial h3 {
-    margin-top: 0.5rem;
-    font-size: 2.6rem;
-  }
-  #ingredients .ingredients-waterImg {
-    padding-top: 1rem;
-  }
-  #ingredients .ingredients-wrapper .ingredients-box {
-    margin-top: -14rem;
-    width: 86%;
-  }
-  #ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc img {
-    width: 240px;
-  }
-  #ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc .ingredientDesc-long {
-    padding-top: 0;
-  }
-  #ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc .ingredientDesc-long .ingredientImg {
-    margin-right: 1rem;
-  }
-  #ingredients .ingredients-wrapper .ingredients-box #ingredientsDesc .ingredientDesc-long .ingredient-text {
-    padding-top: 2rem;
-  }
-  #ingredients .ingredients-wrapper .ingredients-box #ingredientsSlider {
-    margin-bottom: 2rem;
-  }
-  #ingredients .ingredients-wrapper #video {
-    width: 100%;
-  }
-  #blog .blog-text {
-    top: 0;
-    padding-right: 0;
-    width: 50%;
-  }
-}
-
-@media only screen and (min-width: 650px) and (max-width: 699px) {
-  #hero .heroBox {
-    top: 58%;
   }
 }
 
