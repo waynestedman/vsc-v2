@@ -29,3 +29,54 @@ $vscPink: #fcd9dd;
     @include clearfix;
   }
 } // content-wrapper
+.o-introWrapper {
+  background: $vscLtBlue;
+
+  #m-hero {
+    position: relative;
+    margin-bottom: 4rem;
+
+    .a-heroImg {
+      position: absolute;
+      top: -6rem;
+      right: -4rem;
+      width: 50%;
+    }
+    .a-ratingBadge {
+      position: absolute;
+      top: 2rem;
+      right: 0;
+      width: 10%;
+    }
+    .m-heroBox {
+      width: 46%;
+      padding-top: 12%;
+      margin-left: 6%;
+
+    }
+  } // m-hero
+  #m-info {
+    position: relative;
+
+    .a-infoImg {
+      width: 36%;
+    } // a-infoImg
+    .m-infoDetails {
+      width: 40%;
+
+      .m-infoDetails-text {
+
+      }
+      .m-details {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        display: inline-block;
+
+        .m-detail {
+          width: 40%;
+        } // details
+      } // details
+    } // m-infoDetails
+  } // m-info
+} // intro wrapper
