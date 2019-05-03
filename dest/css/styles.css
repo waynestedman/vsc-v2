@@ -231,15 +231,22 @@ body {
 }
 
 .content-wrapper h3 {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .content-wrapper h4 {
   font-size: 1.8rem;
+  margin-bottom: 1rem;
 }
 
 .content-wrapper h5 {
   font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 4rem;
+}
+
+.content-wrapper h6 {
+  margin-top: 4rem;
 }
 
 .content-wrapper .button-cta {
@@ -248,12 +255,17 @@ body {
   background-color: #004098;
   color: #fff;
   text-transform: uppercase;
-  padding: 1rem 3rem;
-  border: 1rem solid #004098;
+  padding: 1rem 4rem;
+  border: 1px solid #004098;
 }
 
 .content-wrapper .button-cta:hover {
-  background-color: #BDBDBD;
+  background-color: #b9d9ec;
+}
+
+.content-wrapper .blog-link {
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 .content-wrapper .clearfix {
@@ -339,6 +351,10 @@ body {
   width: 46%;
 }
 
+.o-introWrapper #m-info .m-infoDetails .m-details .m-detail h4 {
+  font-weight: 400;
+}
+
 #testimonialsSlider {
   margin: 0 auto;
   width: 90%;
@@ -376,6 +392,91 @@ body {
 
 #testimonialsSlider .m-testimonial blockquote span {
   font-weight: 400;
+}
+
+#o-beforeAfter {
+  background-color: #fcd9dd;
+}
+
+#o-beforeAfter .m-beforeAfter-text {
+  display: inline-block;
+  padding: 4rem 2rem;
+  width: 34%;
+}
+
+#o-beforeAfter .m-beforeAfter-text p {
+  width: 50%;
+}
+
+#o-beforeAfter .m-beforeAfter-slider {
+  display: inline-block;
+  width: 50%;
+}
+
+#o-blog {
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+#o-blog .a-blogImg-left {
+  width: 60%;
+  display: inline-block;
+}
+
+#o-blog .a-blogImg-right {
+  width: 20%;
+  display: inline-block;
+  float: right;
+}
+
+#o-blog .m-blog-text {
+  width: 40%;
+  margin-left: 50%;
+  margin-top: -20rem;
+}
+
+#o-blog .m-blog-text h2 {
+  margin-top: 0;
+}
+
+#o-blog .m-blog-text h3 {
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+#o-products {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+#o-products .m-primers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+#o-products .m-primers .m-primer {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+#o-products .m-primers .m-primer img {
+  max-width: 183px;
 }
 
 @media only screen and (max-width: 649px) {
