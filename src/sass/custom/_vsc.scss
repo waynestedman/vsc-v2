@@ -12,6 +12,21 @@ $vscPink: #fcd9dd;
       from {opacity: 0;}
       to {opacity: 1;}
   }
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 3rem;
+  }
+  h4 {
+    font-size: 1.8rem;
+  }
+  h5 {
+    font-size: 1.2rem;
+  }
   .button-cta {
     font-size: 2rem;
     font-weight: 400;
@@ -19,7 +34,7 @@ $vscPink: #fcd9dd;
     color: #fff;
     text-transform: uppercase;
     padding: 1rem 3rem;
-    border: 1px solid #004098;
+    border: 1rem solid #004098;
 
     &:hover {
       background-color: $gray400;
@@ -34,13 +49,14 @@ $vscPink: #fcd9dd;
 
   #m-hero {
     position: relative;
-    margin-bottom: 4rem;
+    margin-bottom: 14rem; // ** ! **
 
     .a-heroImg {
       position: absolute;
       top: -6rem;
       right: -4rem;
       width: 50%;
+      max-height: 700px; // ** ! **
     }
     .a-ratingBadge {
       position: absolute;
@@ -59,10 +75,13 @@ $vscPink: #fcd9dd;
     position: relative;
 
     .a-infoImg {
+      display: inline-block;
       width: 36%;
     } // a-infoImg
     .m-infoDetails {
-      width: 40%;
+      display: inline-block;
+      margin-left: 4rem;
+      width: 50%;
 
       .m-infoDetails-text {
 
@@ -71,12 +90,54 @@ $vscPink: #fcd9dd;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        display: inline-block;
+        justify-content: space-between;
+        align-items: flex-start;
 
         .m-detail {
-          width: 40%;
+          width: 46%;
         } // details
       } // details
     } // m-infoDetails
   } // m-info
 } // intro wrapper
+#testimonialsSlider {
+  margin: 0 auto;
+  width: 90%;
+  text-align: center;
+
+  .slick-prev {
+    left: -1rem;
+  }
+  .slick-next {
+    right: -1rem;
+  }
+  .m-testimonial {
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+    // height: 305px;
+    padding: 2rem 6rem;
+
+    h3 {
+      // font-size: 2.3rem;
+    }
+    h4 {
+      height: 50px;
+    }
+    img {
+      width: 100px;
+      margin: 0 auto 3rem auto;
+    }
+    blockquote {
+      font-weight: 300;
+      color: unset;
+      font-size: 2rem;
+      margin: 0;
+      text-align: center;
+
+      span {
+        font-weight: 400;
+      }
+    }
+  } // m-testimonial
+} // testimonialsSlider
