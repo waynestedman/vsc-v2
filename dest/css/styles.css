@@ -181,13 +181,14 @@ body {
 }
 
 /* Image Comparison related */
-#img-comp-container {
+.img-comp-container {
   position: relative;
   width: 691px;
   height: 400px;
+  /* same height as the images*/
 }
 
-#img-comp-container .img-comp-img {
+.img-comp-img {
   position: absolute;
   width: auto;
   height: auto;
@@ -197,11 +198,34 @@ body {
   flex-basis: auto;
 }
 
-#img-comp-container .img-comp-img img {
+.img-comp-img img {
   display: block;
   vertical-align: middle;
   height: 400px;
   max-width: inherit;
+}
+
+#slider-wrapper {
+  position: absolute;
+  top: -42.5px;
+  z-index: 9;
+  cursor: ew-resize;
+}
+
+#img-comp-slider {
+  width: 4px;
+  height: 410px;
+  background-color: #212121;
+  opacity: 0.7;
+  margin: 38px 0 0 62px;
+  /* border-radius: 50%; */
+}
+
+#slider-text {
+  margin-top: 6px;
+  color: #212121;
+  text-transform: uppercase;
+  width: 140px;
 }
 
 @-webkit-keyframes fadeEffect {
@@ -285,7 +309,8 @@ body {
 }
 
 .o-introWrapper {
-  background: #b9d9ec;
+  background: -o-linear-gradient(316deg, #b9d9ec 40%, #FFFFFF 40%);
+  background: linear-gradient(134deg, #b9d9ec 40%, #FFFFFF 40%);
 }
 
 .o-introWrapper #m-hero {
@@ -296,7 +321,7 @@ body {
 .o-introWrapper #m-hero .a-heroImg {
   position: absolute;
   top: -6rem;
-  right: -4rem;
+  right: 6rem;
   width: 50%;
   max-height: 700px;
 }
@@ -310,7 +335,7 @@ body {
 
 .o-introWrapper #m-hero .m-heroBox {
   width: 46%;
-  padding-top: 12%;
+  padding-top: 6%;
   margin-left: 6%;
 }
 

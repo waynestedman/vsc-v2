@@ -55,7 +55,7 @@ $vscPink: #fcd9dd;
   }
 } // content-wrapper
 .o-introWrapper {
-  background: $vscLtBlue;
+  background: linear-gradient(134deg, $vscLtBlue 40%, #FFFFFF 40%);
 
   #m-hero {
     position: relative;
@@ -64,7 +64,7 @@ $vscPink: #fcd9dd;
     .a-heroImg {
       position: absolute;
       top: -6rem;
-      right: -4rem;
+      right: 6rem;
       width: 50%;
       max-height: 700px; // ** ! **
     }
@@ -76,7 +76,7 @@ $vscPink: #fcd9dd;
     }
     .m-heroBox {
       width: 46%;
-      padding-top: 12%;
+      padding-top: 6%;
       margin-left: 6%;
 
     }

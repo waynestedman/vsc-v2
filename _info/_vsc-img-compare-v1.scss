@@ -1,0 +1,23 @@
+
+/* Image Comparison related */
+#img-comp-container {
+  position: relative;
+  width: 820px;
+  height: 475px; // same height as the images
+
+  .img-comp-img {
+    position: absolute;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    float: right;
+    flex-basis: auto;
+
+    img {
+      display: block;
+      vertical-align: middle;
+      height: 400px;
+      max-width: inherit;
+    } // img
+  } // img-comp-img
+} // img-comp-container
