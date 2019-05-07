@@ -2,8 +2,8 @@
 /* Image Comparison related */
 .img-comp-container {
   position: relative;
-  width: 691px;
-  height: 400px; /* same height as the images*/
+  width: 840px;
+  height: 560px; /* same height as the images*/
 }
 .img-comp-img {
   position: absolute;
@@ -16,7 +16,7 @@
 .img-comp-img img {
   display: block;
   vertical-align: middle;
-  height: 400px;
+  height: 560px;
   max-width: inherit;
 }
 #slider-wrapper {
@@ -27,10 +27,10 @@
 }
 #img-comp-slider {
   width: 4px;
-  height: 410px;
+  height: 580px;
   background-color: $gray900;
   opacity: 0.7;
-  margin: 38px 0 0 62px;
+  margin: -4rem 0 0 6.8rem;
   /* border-radius: 50%; */
 }
 #slider-text {

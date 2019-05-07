@@ -14,6 +14,7 @@ $vscPink: #fcd9dd;
   }
   h1 {
     font-size: 4rem;
+    margin-bottom: 1rem;
   }
   h2 {
     font-size: 4rem;
@@ -55,7 +56,7 @@ $vscPink: #fcd9dd;
   }
 } // content-wrapper
 .o-introWrapper {
-  background: linear-gradient(134deg, $vscLtBlue 40%, #FFFFFF 40%);
+  background: linear-gradient(146deg, $vscLtBlue 40%, #FFFFFF 40%);
 
   #m-hero {
     position: relative;
@@ -63,22 +64,27 @@ $vscPink: #fcd9dd;
 
     .a-heroImg {
       position: absolute;
-      top: -6rem;
-      right: 6rem;
-      width: 50%;
-      max-height: 700px; // ** ! **
+      top: 6%;
+      right: 9rem;
+      width: 42%;
+      // max-height: 700px; // ** ! **
     }
     .a-ratingBadge {
       position: absolute;
-      top: 2rem;
+      top: 8%;
       right: 0;
-      width: 10%;
+      width: 9%;
     }
     .m-heroBox {
       width: 46%;
       padding-top: 6%;
       margin-left: 6%;
 
+      h2 {
+        font-size: 7rem;
+        line-height: 1;
+        margin-top: 0;
+      }
     }
   } // m-hero
   #m-info {
@@ -156,6 +162,7 @@ $vscPink: #fcd9dd;
   } // m-testimonial
 } // testimonialsSlider
 #o-beforeAfter {
+  position: relative;
   background-color: $vscPink;
 
   .m-beforeAfter-text {
@@ -164,12 +171,13 @@ $vscPink: #fcd9dd;
     width: 34%;
 
     p {
-      width: 50%;
+      width: 80%;
     }
   } // m-beforeAfter-text
   .m-beforeAfter-slider {
     display: inline-block;
-    width: 50%;
+    float: right;
+    width: 65%;
   } // m-beforeAfter-slider
 } // o-beforeAfter
 #o-blog {

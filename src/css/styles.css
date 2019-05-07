@@ -179,8 +179,8 @@ body {
 /* Image Comparison related */
 .img-comp-container {
   position: relative;
-  width: 691px;
-  height: 400px;
+  width: 840px;
+  height: 560px;
   /* same height as the images*/
 }
 
@@ -196,7 +196,7 @@ body {
 .img-comp-img img {
   display: block;
   vertical-align: middle;
-  height: 400px;
+  height: 560px;
   max-width: inherit;
 }
 
@@ -209,10 +209,10 @@ body {
 
 #img-comp-slider {
   width: 4px;
-  height: 410px;
+  height: 580px;
   background-color: #212121;
   opacity: 0.7;
-  margin: 38px 0 0 62px;
+  margin: -4rem 0 0 6.8rem;
   /* border-radius: 50%; */
 }
 
@@ -234,6 +234,7 @@ body {
 
 .content-wrapper h1 {
   font-size: 4rem;
+  margin-bottom: 1rem;
 }
 
 .content-wrapper h2 {
@@ -295,7 +296,7 @@ body {
 }
 
 .o-introWrapper {
-  background: linear-gradient(134deg, #b9d9ec 40%, #FFFFFF 40%);
+  background: linear-gradient(146deg, #b9d9ec 40%, #FFFFFF 40%);
 }
 
 .o-introWrapper #m-hero {
@@ -305,23 +306,28 @@ body {
 
 .o-introWrapper #m-hero .a-heroImg {
   position: absolute;
-  top: -6rem;
-  right: 6rem;
-  width: 50%;
-  max-height: 700px;
+  top: 6%;
+  right: 9rem;
+  width: 42%;
 }
 
 .o-introWrapper #m-hero .a-ratingBadge {
   position: absolute;
-  top: 2rem;
+  top: 8%;
   right: 0;
-  width: 10%;
+  width: 9%;
 }
 
 .o-introWrapper #m-hero .m-heroBox {
   width: 46%;
   padding-top: 6%;
   margin-left: 6%;
+}
+
+.o-introWrapper #m-hero .m-heroBox h2 {
+  font-size: 7rem;
+  line-height: 1;
+  margin-top: 0;
 }
 
 .o-introWrapper #m-info {
@@ -395,6 +401,7 @@ body {
 }
 
 #o-beforeAfter {
+  position: relative;
   background-color: #fcd9dd;
 }
 
@@ -405,12 +412,13 @@ body {
 }
 
 #o-beforeAfter .m-beforeAfter-text p {
-  width: 50%;
+  width: 80%;
 }
 
 #o-beforeAfter .m-beforeAfter-slider {
   display: inline-block;
-  width: 50%;
+  float: right;
+  width: 65%;
 }
 
 #o-blog {
