@@ -56,6 +56,7 @@ $vscPink: #fcd9dd;
   }
 } // content-wrapper
 .o-introWrapper {
+  margin-bottom: 4rem;
   background: linear-gradient(146deg, $vscLtBlue 40%, #FFFFFF 40%);
 
   #m-hero {
@@ -92,11 +93,14 @@ $vscPink: #fcd9dd;
 
     .a-infoImg {
       display: inline-block;
+      float: left;
       width: 36%;
     } // a-infoImg
     .m-infoDetails {
+      position: relative;
       display: inline-block;
-      margin-left: 4rem;
+      margin-left: 8rem;
+      margin-bottom: 10rem;
       width: 50%;
 
       .m-infoDetails-text {
@@ -120,6 +124,9 @@ $vscPink: #fcd9dd;
     } // m-infoDetails
   } // m-info
 } // intro wrapper
+#o-testimonials {
+  margin-bottom: 4rem;
+}
 #testimonialsSlider {
   margin: 0 auto;
   width: 90%;
@@ -169,7 +176,8 @@ $vscPink: #fcd9dd;
 
   .m-beforeAfter-text {
     display: inline-block;
-    padding: 4rem 2rem;
+    float: left;
+    padding: 4rem 0 4rem 4rem;
     width: 34%;
 
     p {
@@ -178,7 +186,7 @@ $vscPink: #fcd9dd;
   } // m-beforeAfter-text
   .m-beforeAfter-slider {
     display: inline-block;
-    float: right;
+    // float: right;
     width: 65%;
   } // m-beforeAfter-slider
 } // o-beforeAfter
