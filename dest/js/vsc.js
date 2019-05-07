@@ -16,7 +16,7 @@ function initComparisons() {
         clicked = 0,
         w,
         h;
-    var node = document.createTextNode("slide to reveal");
+    var node = document.createTextNode("SLIDE TO REVEAL");
     w = img.offsetWidth;
     h = img.offsetHeight;
     img.style.width = w / 2 + "px";

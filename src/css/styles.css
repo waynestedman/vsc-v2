@@ -186,10 +186,10 @@ body {
 
 .img-comp-img {
   position: absolute;
-  width: auto;
+  width: 840px !important;
   height: auto;
   overflow: hidden;
-  float: right;
+  right: 8px;
   flex-basis: auto;
 }
 
@@ -202,7 +202,7 @@ body {
 
 #slider-wrapper {
   position: absolute;
-  top: -42.5px;
+  top: -8px;
   z-index: 9;
   cursor: ew-resize;
 }
@@ -212,7 +212,7 @@ body {
   height: 580px;
   background-color: #212121;
   opacity: 0.7;
-  margin: -4rem 0 0 6.8rem;
+  margin: 0 0 0 6.8rem;
   /* border-radius: 50%; */
 }
 
@@ -402,6 +402,8 @@ body {
 
 #o-beforeAfter {
   position: relative;
+  margin-bottom: 1rem;
+  height: 560px;
   background-color: #fcd9dd;
 }
 
