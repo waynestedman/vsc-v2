@@ -9,6 +9,7 @@ function compareImages(img) {
   var node = document.createTextNode("SLIDE TO REVEAL");
   w = img.offsetWidth;
   h = img.offsetHeight;
+  // h = img.clientHeight;
   img.style.width = (w / 2) + "px";
   sliderWrapper = document.createElement("DIV");
   sliderWrapper.setAttribute("id", "slider-wrapper");
@@ -20,7 +21,8 @@ function compareImages(img) {
   sliderText.appendChild(node);
   sliderWrapper.appendChild(sliderText);
   img.parentElement.insertBefore(sliderWrapper, img);
-  sliderWrapper.style.top = (h / 2) - (sliderWrapper.offsetHeight / 2) + "px";
+  // sliderWrapper.style.top = (h / 2) - (sliderWrapper.offsetHeight / 2) + "px";
+  sliderWrapper.style.top = (h / 2) - (sliderWrapper.clientHeight / 2) + "px";
   sliderWrapper.style.left = (w / 2) - (sliderWrapper.offsetWidth / 2) + "px";
   sliderWrapper.addEventListener("mousedown", slideReady);
   window.addEventListener("mouseup", slideFinish);
@@ -59,7 +61,7 @@ function compareImages(img) {
 } /* initComparisons */
 
 $(document).ready(function(){
-  initComparisons();
+  // initComparisons();
   $('#testimonialsSlider').slick({
     dots: false,
     // arrows: true,
