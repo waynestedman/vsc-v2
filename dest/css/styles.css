@@ -194,30 +194,30 @@ body {
   height: auto;
   overflow: hidden;
   float: right;
-  -ms-flex-preferred-size: auto;
-  flex-basis: auto;
 }
 
 .img-comp-img img {
   display: block;
   vertical-align: middle;
   margin: 0;
-  height: 560px;
+  width: 840px;
   max-width: inherit;
 }
 
 #slider-wrapper {
   position: absolute;
+  padding: 66px 0 0 0;
+  margin: 0;
   z-index: 9;
   cursor: ew-resize;
 }
 
 #img-comp-slider {
   width: 4px;
-  height: 580px;
+  height: 570px;
   background-color: #212121;
   opacity: 0.7;
-  margin: 38px 0 0 68px;
+  margin: 0 0 0 68px;
 }
 
 #slider-text {

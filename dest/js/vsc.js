@@ -17,9 +17,9 @@ function initComparisons() {
         w,
         h;
     var node = document.createTextNode("SLIDE TO REVEAL");
-    w = img.offsetWidth;
-    h = img.offsetHeight; // h = img.clientHeight;
+    w = img.offsetWidth; // h = img.offsetHeight;
 
+    h = img.clientHeight;
     img.style.width = w / 2 + "px";
     sliderWrapper = document.createElement("DIV");
     sliderWrapper.setAttribute("id", "slider-wrapper");

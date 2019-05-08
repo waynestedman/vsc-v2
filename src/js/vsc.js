@@ -8,8 +8,8 @@ function compareImages(img) {
   var sliderWrapper, slider, sliderText, img, clicked = 0, w, h;
   var node = document.createTextNode("SLIDE TO REVEAL");
   w = img.offsetWidth;
-  h = img.offsetHeight;
-  // h = img.clientHeight;
+  // h = img.offsetHeight;
+  h = img.clientHeight;
   img.style.width = (w / 2) + "px";
   sliderWrapper = document.createElement("DIV");
   sliderWrapper.setAttribute("id", "slider-wrapper");
