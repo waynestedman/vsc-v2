@@ -61,12 +61,12 @@ function compareImages(img) {
 } /* initComparisons */
 
 $(document).ready(function(){
-  // initComparisons();
+  initComparisons();
   $('#testimonialsSlider').slick({
     dots: false,
     arrows: true,
-    autoplay: true,
-    autoplaySpeed: 4000,
+    // autoplay: true,
+    // autoplaySpeed: 4000,
     // fade: true,
     focusOnChange: true,
     speed: 1200,

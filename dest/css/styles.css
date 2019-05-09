@@ -540,6 +540,23 @@ body {
   .content-wrapper .slick-list {
     margin: 0 auto;
   }
+  .o-introWrapper #m-hero {
+    text-align: center;
+  }
+  .o-introWrapper #m-hero .a-heroImg {
+    position: relative;
+    top: unset;
+    right: unset;
+    width: 96%;
+  }
+  .o-introWrapper #m-hero .a-ratingBadge {
+    top: 6%;
+    width: 20%;
+  }
+  .o-introWrapper #m-hero .m-heroBox {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 
 

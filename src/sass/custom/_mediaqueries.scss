@@ -5,7 +5,26 @@
       margin: 0 auto;
     }
   } // content-wrapper
+  .o-introWrapper {
+    #m-hero {
+      text-align: center;
 
+      .a-heroImg {
+        position: relative;
+        top: unset;
+        right: unset;
+        width: 96%;
+      } // a-heroImg
+      .a-ratingBadge {
+        top: 6%;
+        width: 20%;
+      } // a-ratingBadge
+      .m-heroBox {
+        width: 90%;
+        margin: 0 auto;
+      } // m-heroBox
+    } // m-hero
+  } // introWrapper
 } // Mobile - everything smaller than 650
 
 // @media only screen and (max-width: 459px) {
