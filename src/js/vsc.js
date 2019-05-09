@@ -64,13 +64,12 @@ $(document).ready(function(){
   // initComparisons();
   $('#testimonialsSlider').slick({
     dots: false,
-    // arrows: true,
-    // autoplay: true,
-    // autoplaySpeed: 4000,
+    arrows: true,
+    autoplay: true,
+    autoplaySpeed: 4000,
     // fade: true,
     focusOnChange: true,
     speed: 1200,
-    // cssEase: 'ease-in-out',
     infinite: true,
     slidesToShow: 2,
     slidesToScroll: 2,

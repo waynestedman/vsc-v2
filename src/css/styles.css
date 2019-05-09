@@ -202,7 +202,7 @@ body {
 
 #slider-wrapper {
   position: absolute;
-  padding: 66px 0 0 0;
+  padding: 50px 0 0 0;
   margin: 0;
   z-index: 9;
   cursor: ew-resize;
@@ -213,14 +213,14 @@ body {
   height: 570px;
   background-color: #212121;
   opacity: 0.7;
-  margin: 0 0 0 68px;
+  margin: 0 0 0 72px;
 }
 
 #slider-text {
   margin-top: 6px;
   color: #212121;
   text-transform: uppercase;
-  width: 140px;
+  width: 150px;
 }
 
 @keyframes fadeEffect {
@@ -320,7 +320,7 @@ body {
 }
 
 .o-introWrapper #m-hero .m-heroBox {
-  width: 46%;
+  width: 33%;
   padding-top: 6%;
   margin-left: 6%;
 }
@@ -338,7 +338,8 @@ body {
 .o-introWrapper #m-info .a-infoImg {
   display: inline-block;
   float: left;
-  width: 36%;
+  width: 30%;
+  margin-left: 5%;
 }
 
 .o-introWrapper #m-info .m-infoDetails {
@@ -418,7 +419,8 @@ body {
 #o-beforeAfter .m-beforeAfter-text {
   display: inline-block;
   float: left;
-  padding: 4rem 0 4rem 4rem;
+  padding: 4rem 0 4rem 6rem;
+  margin-top: 9%;
   width: 34%;
 }
 
@@ -433,7 +435,7 @@ body {
 
 #o-blog {
   position: relative;
-  margin-bottom: 4rem;
+  margin-bottom: 8rem;
 }
 
 #o-blog .a-blogImg-left {
@@ -442,7 +444,7 @@ body {
 }
 
 #o-blog .a-blogImg-right {
-  width: 20%;
+  width: 25%;
   display: inline-block;
   float: right;
 }
@@ -467,6 +469,10 @@ body {
   padding-top: 2rem;
 }
 
+#o-products h2 {
+  margin-bottom: 4rem;
+}
+
 #o-products .m-primers {
   display: flex;
   flex-direction: row;
@@ -481,6 +487,14 @@ body {
 
 #o-products .m-primers .m-primer img {
   max-width: 183px;
+}
+
+#o-products .m-primers .m-primer h4 {
+  text-transform: uppercase;
+}
+
+#o-products .m-primers .m-primer h5 {
+  height: 3.4rem;
 }
 
 @media only screen and (max-width: 649px) {
