@@ -297,7 +297,7 @@ body {
 
 .o-introWrapper {
   margin-bottom: 4rem;
-  background: linear-gradient(146deg, #b9d9ec 40%, #FFFFFF 40%);
+  background: linear-gradient(146deg, #b9d9ec 48%, #FFFFFF 48%);
 }
 
 .o-introWrapper #m-hero {
@@ -342,27 +342,32 @@ body {
   margin-left: 5%;
 }
 
-.o-introWrapper #m-info .m-infoDetails {
+.o-introWrapper #m-info .m-infoText {
   position: relative;
   display: inline-block;
   margin-left: 8rem;
-  margin-bottom: 10rem;
+  margin-bottom: 0;
   width: 50%;
 }
 
-.o-introWrapper #m-info .m-infoDetails .m-details {
+.o-introWrapper #m-info .m-details {
+  position: relative;
+  display: inline-block;
+  padding-left: 8rem;
+  margin-bottom: 10rem;
+  width: 54%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: flex-start;
 }
 
-.o-introWrapper #m-info .m-infoDetails .m-details .m-detail {
-  width: 46%;
+.o-introWrapper #m-info .m-details .m-detail {
+  width: 42%;
+  margin-right: 6%;
 }
 
-.o-introWrapper #m-info .m-infoDetails .m-details .m-detail h4 {
+.o-introWrapper #m-info .m-details .m-detail h4 {
   font-weight: 400;
 }
 
@@ -502,6 +507,9 @@ body {
   .content-wrapper .slick-list {
     margin: 0 auto;
   }
+  .o-introWrapper {
+    background: linear-gradient(160deg, #b9d9ec 12%, #aaa 11.9%, #FFFFFF 12.1%);
+  }
   .o-introWrapper #m-hero {
     text-align: center;
   }
@@ -510,14 +518,33 @@ body {
     top: unset;
     right: unset;
     width: 96%;
+    padding-top: 2rem;
   }
   .o-introWrapper #m-hero .a-ratingBadge {
-    top: 6%;
-    width: 20%;
+    top: 34%;
+    right: 12%;
+    width: 22%;
   }
   .o-introWrapper #m-hero .m-heroBox {
     width: 90%;
     margin: 0 auto;
+  }
+  .o-introWrapper #m-info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .o-introWrapper #m-info .a-infoImg {
+    width: 100%;
+    margin-left: unset;
+    float: unset;
+    order: 2;
+  }
+  .o-introWrapper #m-info .m-infoText {
+    order: 1;
+  }
+  .o-introWrapper #m-info .m-details {
+    order: 3;
   }
 }
 

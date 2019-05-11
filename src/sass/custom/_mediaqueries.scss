@@ -6,6 +6,8 @@
     }
   } // content-wrapper
   .o-introWrapper {
+    background: linear-gradient(160deg, $vscLtBlue 12%, #aaa 11.9%, #FFFFFF 12.1%);
+
     #m-hero {
       text-align: center;
 
@@ -14,16 +16,36 @@
         top: unset;
         right: unset;
         width: 96%;
+        padding-top: 2rem;
       } // a-heroImg
       .a-ratingBadge {
-        top: 6%;
-        width: 20%;
+        top: 34%;
+        right: 12%;
+        width: 22%;
       } // a-ratingBadge
       .m-heroBox {
         width: 90%;
         margin: 0 auto;
       } // m-heroBox
     } // m-hero
+    #m-info {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      .a-infoImg {
+        width: 100%;
+        margin-left: unset;
+        float: unset;
+        order: 2
+      } // a-infoImg
+      .m-infoText{
+        order: 1;
+      }
+      .m-details {
+        order: 3;
+      }
+    } // m-info
   } // introWrapper
 } // Mobile - everything smaller than 650
 
