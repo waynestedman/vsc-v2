@@ -42,3 +42,25 @@
   text-transform: uppercase;
   width: 150px;
 }
+@media only screen and (max-width: 649px) {
+  .img-comp-container {
+    position: relative;
+    width: auto;
+    height: auto;
+    // min-width: 336px;
+    min-height: 224px;
+  }
+  .img-comp-img img {
+    width: 330px;
+  }
+  #slider-wrapper {
+    padding-top: 42px;
+  }
+  #img-comp-slider {
+    height: 230px;
+  }
+  #slider-text {
+    font-size: 1.2rem;
+    margin-top: 0;
+  }
+} // mobile exceptions < 650px

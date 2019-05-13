@@ -177,6 +177,11 @@ $vscPink: #fcd9dd;
   height: 560px;
   background-color: $vscPink;
 
+  .m-beforeAfter-slider {
+    display: inline-block;
+    // float: right;
+    width: 65%;
+  } // m-beforeAfter-slider
   .m-beforeAfter-text {
     display: inline-block;
     float: left;
@@ -188,11 +193,6 @@ $vscPink: #fcd9dd;
       width: 80%;
     }
   } // m-beforeAfter-text
-  .m-beforeAfter-slider {
-    display: inline-block;
-    // float: right;
-    width: 65%;
-  } // m-beforeAfter-slider
 } // o-beforeAfter
 #o-blog {
   position: relative;

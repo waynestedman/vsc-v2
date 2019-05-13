@@ -98,14 +98,35 @@
     } //testimonial
   } //testimonials
   #o-beforeAfter {
+    height: auto;
+    text-align: center;
+    margin-bottom: 0;
 
+    .m-beforeAfter-slider {
+      position: relative;
+      width: 100%;
+      min-height: 233px;
+      display: block;
+    } // m-beforeAfter-slider
+    .m-beforeAfter-text {
+      position: relative;
+      display: block;
+      float: unset;
+      padding: 0 0 2rem 0;
+      margin: 0 auto;
+      width: 96%;
+
+      p {
+        margin: 0 auto;
+      }
+    } // m-beforeAfter-text
   } // o-beforeAfter
   #o-blog {
     text-align: center;
     margin-bottom: 4rem;
 
     .a-blogImg-left {
-      width: 96%;
+      width: 100%;
     } // a-blogImg-left
     .a-blogImg-right {
       display: none;
@@ -113,6 +134,10 @@
     .m-blog-text {
       width: 96%;
       margin: 0 auto;
+
+      h2 {
+        margin-bottom: 1rem;
+      }
     } // m-blog-text
   } //o-blog
   #o-products {
@@ -126,6 +151,7 @@
 
         h4 {
           font-size: 2.2rem;
+          margin-bottom: 0.2rem;
         }
         h5 {
           font-size: 1.4rem;
