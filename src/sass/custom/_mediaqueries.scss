@@ -1,6 +1,20 @@
 @media only screen and (max-width: 649px) {
   .content-wrapper {
-
+    h2 {
+      font-size: 3rem;
+    }
+    h3 {
+      font-size: 2.3rem;
+    }
+    h6 {
+      margin-top: 2rem;
+    }
+    .button-cta {
+      margin-top: 0;
+      padding-left: 3rem;
+      padding-right: 3rem;
+      font-size: 1.6rem;
+    }
     .slick-list {
       margin: 0 auto;
     }
@@ -10,6 +24,7 @@
 
     #m-hero {
       text-align: center;
+      margin-bottom: 4rem;
 
       .a-heroImg {
         position: relative;
@@ -39,14 +54,86 @@
         float: unset;
         order: 2
       } // a-infoImg
-      .m-infoText{
+      .m-infoText {
+        width: 96%;
         order: 1;
+        margin: 0 auto;
       }
       .m-details {
         order: 3;
-      }
+        width: 96%;
+        justify-content: center;
+        padding-left: 0;
+        margin-left: 0;
+        margin-bottom:0;
+
+        .m-detail {
+          width: 48%;
+          margin-right: 0;
+
+          &:nth-child(odd) {
+            margin-right: 4%;
+          }
+        } // detail
+      } // m-details
     } // m-info
   } // introWrapper
+  #testimonialsSlider {
+    width: 98%;
+
+    .m-testimonial {
+      h3, h4, blockquote {
+        line-height: 1.15;
+      }
+      img {
+        margin-bottom: 2rem;
+      }
+      h4 {
+        height: 70px;
+      }
+      blockquote {
+        font-size: 1.8rem;
+        margin-top: 4rem;
+      }
+    } //testimonial
+  } //testimonials
+  #o-beforeAfter {
+
+  } // o-beforeAfter
+  #o-blog {
+    text-align: center;
+    margin-bottom: 4rem;
+
+    .a-blogImg-left {
+      width: 96%;
+    } // a-blogImg-left
+    .a-blogImg-right {
+      display: none;
+    } // a-blogImg-right
+    .m-blog-text {
+      width: 96%;
+      margin: 0 auto;
+    } // m-blog-text
+  } //o-blog
+  #o-products {
+    padding-top: unset;
+
+    .m-primers {
+      flex-direction: column;
+
+      .m-primer {
+        margin: 0 auto 3rem auto;
+
+        h4 {
+          font-size: 2.2rem;
+        }
+        h5 {
+          font-size: 1.4rem;
+          margin-bottom: 2rem;
+        }
+      } // m-primer
+    } // m-primers
+  } //o-products
 } // Mobile - everything smaller than 650
 
 // @media only screen and (max-width: 459px) {

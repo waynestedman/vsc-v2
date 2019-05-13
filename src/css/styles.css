@@ -504,6 +504,21 @@ body {
 }
 
 @media only screen and (max-width: 649px) {
+  .content-wrapper h2 {
+    font-size: 3rem;
+  }
+  .content-wrapper h3 {
+    font-size: 2.3rem;
+  }
+  .content-wrapper h6 {
+    margin-top: 2rem;
+  }
+  .content-wrapper .button-cta {
+    margin-top: 0;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    font-size: 1.6rem;
+  }
   .content-wrapper .slick-list {
     margin: 0 auto;
   }
@@ -512,6 +527,7 @@ body {
   }
   .o-introWrapper #m-hero {
     text-align: center;
+    margin-bottom: 4rem;
   }
   .o-introWrapper #m-hero .a-heroImg {
     position: relative;
@@ -541,10 +557,70 @@ body {
     order: 2;
   }
   .o-introWrapper #m-info .m-infoText {
+    width: 96%;
     order: 1;
+    margin: 0 auto;
   }
   .o-introWrapper #m-info .m-details {
     order: 3;
+    width: 96%;
+    justify-content: center;
+    padding-left: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+  .o-introWrapper #m-info .m-details .m-detail {
+    width: 48%;
+    margin-right: 0;
+  }
+  .o-introWrapper #m-info .m-details .m-detail:nth-child(odd) {
+    margin-right: 4%;
+  }
+  #testimonialsSlider {
+    width: 98%;
+  }
+  #testimonialsSlider .m-testimonial h3, #testimonialsSlider .m-testimonial h4, #testimonialsSlider .m-testimonial blockquote {
+    line-height: 1.15;
+  }
+  #testimonialsSlider .m-testimonial img {
+    margin-bottom: 2rem;
+  }
+  #testimonialsSlider .m-testimonial h4 {
+    height: 70px;
+  }
+  #testimonialsSlider .m-testimonial blockquote {
+    font-size: 1.8rem;
+    margin-top: 4rem;
+  }
+  #o-blog {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  #o-blog .a-blogImg-left {
+    width: 96%;
+  }
+  #o-blog .a-blogImg-right {
+    display: none;
+  }
+  #o-blog .m-blog-text {
+    width: 96%;
+    margin: 0 auto;
+  }
+  #o-products {
+    padding-top: unset;
+  }
+  #o-products .m-primers {
+    flex-direction: column;
+  }
+  #o-products .m-primers .m-primer {
+    margin: 0 auto 3rem auto;
+  }
+  #o-products .m-primers .m-primer h4 {
+    font-size: 2.2rem;
+  }
+  #o-products .m-primers .m-primer h5 {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
   }
 }
 
