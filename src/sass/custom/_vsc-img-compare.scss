@@ -46,18 +46,24 @@
   .img-comp-container {
     position: relative;
     width: auto;
-    height: auto;
+    // height: inherit;
     // min-width: 336px;
     min-height: 224px;
   }
+  .img-comp-img {
+    width: inherit !important;
+  }
   .img-comp-img img {
-    width: 330px;
+    min-width: 330px;
+    max-width: 530px;
+    width: inherit;
   }
   #slider-wrapper {
     padding-top: 42px;
   }
   #img-comp-slider {
-    height: 230px;
+    min-height: 230px;
+    height: inherit;
   }
   #slider-text {
     font-size: 1.2rem;

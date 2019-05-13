@@ -231,17 +231,22 @@ body {
   .img-comp-container {
     position: relative;
     width: auto;
-    height: auto;
     min-height: 224px;
   }
+  .img-comp-img {
+    width: inherit !important;
+  }
   .img-comp-img img {
-    width: 330px;
+    min-width: 330px;
+    max-width: 530px;
+    width: inherit;
   }
   #slider-wrapper {
     padding-top: 42px;
   }
   #img-comp-slider {
-    height: 230px;
+    min-height: 230px;
+    height: inherit;
   }
   #slider-text {
     font-size: 1.2rem;
@@ -596,7 +601,7 @@ body {
     padding-top: 2rem;
   }
   .o-introWrapper #m-hero .a-ratingBadge {
-    top: 34%;
+    top: 39%;
     right: 12%;
     width: 22%;
   }
@@ -619,8 +624,9 @@ body {
     margin-left: unset;
     float: unset;
     -webkit-box-ordinal-group: 3;
-    -ms-flex-order: 2;
-    order: 2;
+    -ms-flex-order: 2 img;
+    order: 2 img;
+    order-width: 50%;
   }
   .o-introWrapper #m-info .m-infoText {
     width: 96%;
@@ -638,8 +644,7 @@ body {
     -ms-flex-pack: center;
     justify-content: center;
     padding-left: 0;
-    margin-left: 0;
-    margin-bottom: 0;
+    margin: 0 auto;
   }
   .o-introWrapper #m-info .m-details .m-detail {
     width: 48%;
@@ -672,7 +677,7 @@ body {
   #o-beforeAfter .m-beforeAfter-slider {
     position: relative;
     width: 100%;
-    min-height: 233px;
+    max-height: 370px;
     display: block;
   }
   #o-beforeAfter .m-beforeAfter-text {
