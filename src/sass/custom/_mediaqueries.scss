@@ -178,10 +178,17 @@
     padding: 0 8%;
   }
 } // min 400 to max 450
-@media only screen and (min-width: 451px) and (max-width: 499px) {
+@media only screen and (min-width: 451px) and (max-width: 549px) {
   #o-beforeAfter {
     .m-beforeAfter-slider {
       max-height: 290px;
     }
   }
-} // min 451 to max 499
+} // min 451 to max 549
+@media only screen and (min-width: 550px) and (max-width: 649px) {
+  #o-beforeAfter {
+    .m-beforeAfter-slider {
+      max-height: 360px !important;
+    }
+  }
+} // min 550 to max 649
