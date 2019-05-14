@@ -1,24 +1,98 @@
-/* Focus
-$focus-outline-color: transparentize($action-color, 0.4);
-$focus-outline-width: 3px;
-$focus-outline: $focus-outline-width solid $focus-outline-color;
-$focus-outline-offset: 2px;
+<script type="text/javascript" xml="space">// <![CDATA[
 
-// Animations
-$base-duration: 150ms;
-$base-timing: ease;
-*/
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
+require([
+  'jquery',
+  'slick'
+  ], function ($) {
 
-body {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  color: #424649;
-  background: #DDDDDD;
-}
+    function initComparisons() {
+    var x, i;
+    x = document.getElementsByClassName("img-comp-overlay");
+    for (i = 0; i < x.length; i++) {
+      compareImages(x[i]);
+    }
+    function compareImages(img) {
+      var sliderWrapper, slider, sliderText, img, clicked = 0, w, h;
+      var node = document.createTextNode("SLIDE TO REVEAL");
+      w = img.offsetWidth;
+      h = img.clientHeight;
+      img.style.width = (w / 2) + "px";
+      sliderWrapper = document.createElement("DIV");
+      sliderWrapper.setAttribute("id", "slider-wrapper");
+      slider = document.createElement("DIV");
+      slider.setAttribute("id", "img-comp-slider");
+      sliderWrapper.appendChild(slider);
+      sliderText = document.createElement("P");
+      sliderText.setAttribute("id", "slider-text");
+      sliderText.appendChild(node);
+      sliderWrapper.appendChild(sliderText);
+      img.parentElement.insertBefore(sliderWrapper, img);
+      sliderWrapper.style.top = (h / 2) - (sliderWrapper.clientHeight / 2) + "px";
+      sliderWrapper.style.left = (w / 2) - (sliderWrapper.offsetWidth / 2) + "px";
+      sliderWrapper.addEventListener("mousedown", slideReady);
+      window.addEventListener("mouseup", slideFinish);
+      sliderWrapper.addEventListener("touchstart", slideReady);
+      window.addEventListener("touchstop", slideFinish);
+      function slideReady(e) {
+        e.preventDefault();
+        clicked = 1;
+        window.addEventListener("mousemove", slideMove);
+        window.addEventListener("touchmove", slideMove);
+      }
+      function slideFinish() {
+        clicked = 0;
+      }
+      function slideMove(e) {
+        var pos;
+        if (clicked == 0) return false;
+        pos = getCursorPos(e)
+        if (pos < 0) pos = 0;
+        if (pos > w) pos = w;
+        slide(pos);
+      }
+      function getCursorPos(e) {
+        var a, x = 0;
+        e = e || window.event;
+        a = img.getBoundingClientRect();
+        x = e.pageX - a.left;
+        x = x - window.pageXOffset;
+        return x;
+      }
+      function slide(x) {
+        img.style.width = x + "px";
+        sliderWrapper.style.left = img.offsetWidth - (sliderWrapper.offsetWidth / 2) + "px";
+      }
+    } /* compareImages */
+    } /* initComparisons */
 
+    $(document).ready(function(){
+      initComparisons();
+      $('#testimonialsSlider').slick({
+        dots: false,
+        arrows: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        focusOnChange: true,
+        speed: 1200,
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        swipe: true,
+        responsive: [
+          {
+            breakpoint: 700,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              infinite: true
+            }
+          }
+        ]
+      }); // testimonials slider
+    }); //doc ready
+}); //require
+// ]]></script>
+<style xml="space"><!--
 .cms-page-view .column.main img {
   margin: 0 auto;
 }
@@ -369,7 +443,7 @@ body {
 .o-introWrapper {
   margin-bottom: 4rem;
   background: -o-linear-gradient(304deg, #b9d9ec 48%, #aaa 47.9%, #FFFFFF 48.1%);
-  background: linear-gradient(146deg, #b9d9ec 48%, #aaa 47.9%, #FFFFFF 48.1%);
+  background: linear-gradient(143.5deg, #b9d9ec 48%, #aaa 47.9%, #FFFFFF 48.1%);
 }
 
 .o-introWrapper #m-hero {
@@ -897,7 +971,156 @@ body {
     padding-top: 0;
   }
 }
-
-
-
-/*# sourceMappingURL=styles.css.map */
+--></style>
+<div class="content-wrapper">
+  <section class="o-introWrapper">
+    <section id="m-hero">
+      <div class="a-heroImg">
+        <picture>
+          <source srcset="/media/wysiwyg/content/product/vsc/velvet-skin-coat-m.png" media="(max-width: 799px)" />
+          <img src="/media/wysiwyg/content/product/vsc/velvet-skin-coat.png" alt="DHC Velvet Skin Coat">
+        </picture>
+      </div>
+      <div class="a-ratingBadge">
+        <img src="/media/wysiwyg/content/product/vsc/rating-badge.svg" alt="Badge showing 4.9 star rating out of 805 reviews">
+      </div>
+      <div class="m-heroBox">
+        <h1>Velvet Skin Coat</h1>
+        <h2>Instant Matte<br>Perfection</h2>
+        <p>It&apos;s the ultimate primer with benefits. The clear, powder-gel formula glides on under foundation to lock in your makeup or can be worn without makeup as an all-day skin mattifier.</p>
+        <h6><a href="/velvet-skin-coat.html" class="button-cta">buy now</a></h6>
+      </div>
+    </section> <!-- hero -->
+    <section id="m-info">
+      <div class="a-infoImg">
+        <picture>
+          <source srcset="/media/wysiwyg/content/product/vsc/vsc-hand-m.png" media="(max-width: 649px)" />
+          <img src="/media/wysiwyg/content/product/vsc/vsc-hand.png" alt="Velvet Skin Coat being applied on a hand">
+        </picture>
+      </div> <!-- infoImg -->
+      <!-- <div class="m-infoDetails"> -->
+        <div class="m-infoText">
+          <h2>Primer with a Boost</h2>
+          <p>It&apos;s not every day that a primer gives you something extra. Velvet Skin Coat is more than a mattifier—it helps your makeup last all day and smoothes out the appearance of pores and fine lines.</p>
+        </div>
+        <div class="m-details">
+          <div class="m-detail">
+            <h4>Locks in Your Look</h4>
+            <p>Long-lasting, satiny coverage for all-day wear</p>
+          </div>
+          <div class="m-detail">
+            <h4>Protects</h4>
+            <p>Nourishing olive oil formula fights free-radical damage</p>
+          </div>
+          <div class="m-detail">
+            <h4>Mattifies</h4>
+            <p>Absorbs facial oil and sweat to reduce shine</p>
+          </div>
+          <div class="m-detail">
+            <h4>Glows</h4>
+            <p>Minimizes the look of fine lines, pores and imperfections</p>
+          </div>
+        </div> <!-- details -->
+    <!-- </div> infoDetails -->
+    </section> <!-- info -->
+  </section> <!-- introWrapper -->
+  <section id="o-testimonials">
+    <div id="testimonialsSlider">
+      <div class="m-testimonial one">
+        <h3>Love this product!</h3>
+        <img src="/media/wysiwyg/content/product/vsc/5stars.svg" alt="5 star rating">
+        <h4>My skin really does feel like velvet.</h4>
+        <blockquote><span>Jen C.</span>,<br>Florida</blockquote>
+      </div>
+      <div class="m-testimonial two">
+        <h3>Best Primer Ever!</h3>
+        <img src="/media/wysiwyg/content/product/vsc/5stars.svg" alt="5 star rating">
+        <h4>Hides pores and blemishes like no other primer.</h4>
+        <blockquote><span>Jean111</span>,<br>Pennsylvania</blockquote>
+      </div>
+      <div class="m-testimonial three">
+        <h3>Great Product</h3>
+        <img src="/media/wysiwyg/content/product/vsc/5stars.svg" alt="5 star rating">
+        <h4>This is the BEST primer I&apos;ve ever used.</h4>
+        <blockquote><span>Nisi44</span>,<br>New Jersey</blockquote>
+      </div>
+      <div class="m-testimonial four">
+        <h3>Use daily!</h3>
+        <img src="/media/wysiwyg/content/product/vsc/5stars.svg" alt="5 star rating">
+        <h4>I apply this daily all year long! It helps control shine and makes makeup application so much easier.</h4>
+        <blockquote><span>Munttel</span>,<br>Michigan</blockquote>
+      </div>
+      <div class="m-testimonial five">
+        <h3>This product is magical</h3>
+        <img src="/media/wysiwyg/content/product/vsc/5stars.svg" alt="5 star rating">
+        <h4>Perfection. As a base for makeup or it can be worn alone. It&apos;s that good!</h4>
+        <blockquote><span>Toddy</span>,<br>North Carolina</blockquote>
+      </div>
+      <div class="m-testimonial six">
+        <h3>EXCELLENT ON THE SKIN</h3>
+        <img src="/media/wysiwyg/content/product/vsc/5stars.svg" alt="5 star rating">
+        <h4>Absolutely LOOOOVE this product. It gives a very smooth appearance… this is for sure A KEEPER.</h4>
+        <blockquote><span>Letha</span>,<br>Maryland</blockquote>
+      </div>
+    </div>  <!-- testimonials Slider -->
+  </section> <!-- testimonials -->
+  <section id="o-beforeAfter">
+    <div class="m-beforeAfter-slider">
+      <div class="img-comp-container">
+        <div class="img-comp-img">
+          <img src="/media/wysiwyg/content/product/vsc/with-velvet-skin-coat.jpg" alt="model with velvet skin coat">
+        </div>
+        <div class="img-comp-img img-comp-overlay">
+          <img src="/media/wysiwyg/content/product/vsc/without-velvet-skin-coat.jpg" alt="model without velvet skin coat">
+        </div>
+      </div> <!-- img-comp-container -->
+    </div> <!-- beforeAfter slider -->
+    <div class="m-beforeAfter-text">
+      <h2>Make Your<br>Masterpiece Last</h2>
+      <p>Discover the difference. See how Velvet Skin Coat perfects, smoothes and mattifies your look under makeup.</p>
+    </div> <!-- beforeAfter text -->
+  </section> <!-- beforeAfter -->
+  <section id="o-blog">
+    <div class="a-blogImg-left">
+      <picture>
+        <source srcset="/media/wysiwyg/content/product/vsc/products-m.jpg" media="(max-width: 649px)" />
+        <img src="/media/wysiwyg/content/product/vsc/products.jpg" alt="Revealed: Velvet Skin Coat Tricks! Read More.">
+      </picture>
+    </div>
+    <div class="a-blogImg-right">
+      <picture>
+        <source srcset="/media/wysiwyg/content/product/vsc/powder-makeup-m.jpg" media="(max-width: 649px)" />
+        <img src="/media/wysiwyg/content/product/vsc/powder-makeup.jpg" alt="makeup powder">
+      </picture>
+    </div>
+    <div class="m-blog-text">
+      <h3>Revealed:</h3>
+      <h2>Velvet Skin Coat Tricks</h2>
+      <p>Try These 4 Ways to Hack Your Primer</p>
+      <p><a href="/blog/makeup-primer-hacks/" class="blog-link">Read More &gt;</a></p>
+    </div>
+  </section>
+  <section id="o-products">
+    <h2>Find Your Perfect Primer</h2>
+    <div class="m-primers">
+      <div class="m-primer">
+        <img src="/media/wysiwyg/content/product/vsc/primer-vsc.jpg" alt="velvet skin coat primer">
+        <h4>Velvet Skin Coat</h4>
+        <h5>Skin-perfecting makeup primer for all skin types</h5>
+        <h6><a href="/velvet-skin-coat.html" class="button-cta">buy now</a></h6>
+      </div>
+      <div class="m-primer">
+        <img src="/media/wysiwyg/content/product/vsc/primer-quick-film.jpg" alt="quick film smoother primer">
+        <h4>Quick Film Smoother</h4>
+        <h5>Instant skin smoothing gel for every skin type</h5>
+        <h6><a href="/quick-film-smoother.html" class="button-cta">buy now</a></h6>
+      </div>
+      <div class="m-primer">
+        <img src="/media/wysiwyg/content/product/vsc/primer-clarifying-pore.jpg" alt="clarifying pore cover base primer">
+        <h4>Clarifying Pore Cover Base</h4>
+        <h5>Mattifying primer and pore minimizer<br>for oily and combination skin</h5>
+        <h6><a href="/clarifying-pore-cover-base.html" class="button-cta">buy now</a></h6>
+      </div>
+    </div> <!-- primers -->
+  </section> <!-- products -->
+</div> <!-- content wrapper -->

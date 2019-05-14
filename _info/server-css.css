@@ -1,24 +1,4 @@
-/* Focus
-$focus-outline-color: transparentize($action-color, 0.4);
-$focus-outline-width: 3px;
-$focus-outline: $focus-outline-width solid $focus-outline-color;
-$focus-outline-offset: 2px;
-
-// Animations
-$base-duration: 150ms;
-$base-timing: ease;
-*/
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  color: #424649;
-  background: #DDDDDD;
-}
-
+<style xml="space"><!--
 .cms-page-view .column.main img {
   margin: 0 auto;
 }
@@ -369,7 +349,7 @@ body {
 .o-introWrapper {
   margin-bottom: 4rem;
   background: -o-linear-gradient(304deg, #b9d9ec 48%, #aaa 47.9%, #FFFFFF 48.1%);
-  background: linear-gradient(146deg, #b9d9ec 48%, #aaa 47.9%, #FFFFFF 48.1%);
+  background: linear-gradient(143.5deg, #b9d9ec 48%, #aaa 47.9%, #FFFFFF 48.1%);
 }
 
 .o-introWrapper #m-hero {
@@ -897,7 +877,4 @@ body {
     padding-top: 0;
   }
 }
-
-
-
-/*# sourceMappingURL=styles.css.map */
+--></style>
