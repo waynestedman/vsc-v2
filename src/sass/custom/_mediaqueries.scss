@@ -49,8 +49,8 @@
       text-align: center;
 
       .a-infoImg {
-        width: 100%;
-        margin-left: unset;
+        width: 60%;
+        margin: 0 auto;
         float: unset;
         order: 2
 
@@ -85,6 +85,9 @@
     width: 98%;
 
     .m-testimonial {
+      padding-left: 4.2rem;
+      padding-right: 4.2rem;
+
       h3, h4, blockquote {
         line-height: 1.15;
       }
@@ -96,7 +99,7 @@
       }
       blockquote {
         font-size: 1.8rem;
-        margin-top: 4rem;
+        margin-top: 3rem;
       }
     } //testimonial
   } //testimonials
@@ -186,9 +189,96 @@
   }
 } // min 451 to max 549
 @media only screen and (min-width: 550px) and (max-width: 649px) {
+  #testimonialsSlider {
+    .m-testimonial {
+      padding-left: 5rem;
+      padding-right: 5rem;
+
+      h4 {
+        height: 30px;
+      }
+    }
+  }
   #o-beforeAfter {
     .m-beforeAfter-slider {
       max-height: 360px !important;
     }
   }
 } // min 550 to max 649
+@media only screen and (min-width: 650px) and (max-width: 799px) {
+  .content-wrapper {
+    h1 {
+      font-size: 3.4rem;
+    }
+    h4 {
+      font-size: 1.5rem;
+    }
+  } // content-wrapper
+  .o-introWrapper {
+    background: linear-gradient(145deg, $vscLtBlue 41%, #aaa 40.9%, #FFFFFF 41.1%);
+    margin-bottom: 0;
+
+    #m-hero {
+      margin-bottom: 8rem;
+
+      .a-heroImg {
+        top: 10%;
+        right: 4rem;
+        width: 50%;
+      }
+      .a-ratingBadge {
+        top: 12%;
+      }
+      .m-heroBox {
+        h2 {
+          font-size: 4rem;
+        }
+      } // m-heroBox
+    } // m-hero
+    #m-info {
+      .m-details {
+        margin-bottom: 4rem;
+      }
+    } // m-info
+  } // o-introWrapper
+  #o-beforeAfter {
+    height: 720px;
+    margin-bottom: 0;
+
+    .m-beforeAfter-slider {
+      width: 100%;
+    }
+    .m-beforeAfter-text {
+      text-align: center;
+      float: none;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0;
+
+      h2 {
+        margin-top: 1rem;
+        line-height: 1;
+      }
+      p {
+        margin: 0 auto;
+        width: 74%;
+      }
+    }
+  } // o-beforeAfter
+  #o-blog {
+    margin-bottom: 2rem;
+
+    .m-blog-text {
+      width: 55%;
+      margin-left: 45%;
+      margin-top: -12rem;
+    }
+  } // o-blog
+  #o-products {
+    .m-primers {
+      .m-primer {
+        padding: 0 0.6rem;
+      }
+    }
+  } // o-products
+} // tablet - 650 to 800
