@@ -282,3 +282,57 @@
     }
   } // o-products
 } // tablet - 650 to 800
+@media only screen and (min-width: 800px) and (max-width: 1030px) {
+  // .content-wrapper {
+  //   h1 {
+  //     font-size: 3.4rem;
+  //   }
+  //   h4 {
+  //     font-size: 1.5rem;
+  //   }
+  // } // content-wrapper
+  .o-introWrapper {
+    background: linear-gradient(145deg, $vscLtBlue 45%, #aaa 44.9%, #FFFFFF 45.1%);
+    margin-bottom: 0;
+
+    #m-hero {
+      margin-bottom: 6rem;
+
+      .a-heroImg {
+        top: 2%;
+        right: 4rem;
+        width: 46%;
+      }
+      .a-ratingBadge {
+        top: 12%;
+        width: 8%;
+      }
+      .m-heroBox {
+        width: 40%;
+        h2 {
+          font-size: 6rem;
+        }
+      } // m-heroBox
+    } // m-hero
+  } // o-introWrapper
+  #o-beforeAfter {
+    .m-beforeAfter-slider {
+      width: 61%;
+    } // m-beforeAfter-slider
+    .m-beforeAfter-text {
+      padding: 4rem 0 4rem 2rem;
+      width: 34%;
+    }
+  } // o-beforeAfter
+  #o-blog {
+    margin-bottom: 6rem;
+
+    .m-blog-text {
+      margin-left: 46%;
+      margin-top: -16rem;
+    }
+  } // o-blog
+  #o-products {
+    padding-top: 0;
+  } //o-products
+} // tablet - 800 to 1030

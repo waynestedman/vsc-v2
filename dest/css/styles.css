@@ -855,6 +855,49 @@ body {
   }
 }
 
+@media only screen and (min-width: 800px) and (max-width: 1030px) {
+  .o-introWrapper {
+    background: -o-linear-gradient(305deg, #b9d9ec 45%, #aaa 44.9%, #FFFFFF 45.1%);
+    background: linear-gradient(145deg, #b9d9ec 45%, #aaa 44.9%, #FFFFFF 45.1%);
+    margin-bottom: 0;
+  }
+  .o-introWrapper #m-hero {
+    margin-bottom: 6rem;
+  }
+  .o-introWrapper #m-hero .a-heroImg {
+    top: 2%;
+    right: 4rem;
+    width: 46%;
+  }
+  .o-introWrapper #m-hero .a-ratingBadge {
+    top: 12%;
+    width: 8%;
+  }
+  .o-introWrapper #m-hero .m-heroBox {
+    width: 40%;
+  }
+  .o-introWrapper #m-hero .m-heroBox h2 {
+    font-size: 6rem;
+  }
+  #o-beforeAfter .m-beforeAfter-slider {
+    width: 61%;
+  }
+  #o-beforeAfter .m-beforeAfter-text {
+    padding: 4rem 0 4rem 2rem;
+    width: 34%;
+  }
+  #o-blog {
+    margin-bottom: 6rem;
+  }
+  #o-blog .m-blog-text {
+    margin-left: 46%;
+    margin-top: -16rem;
+  }
+  #o-products {
+    padding-top: 0;
+  }
+}
+
 
 
 /*# sourceMappingURL=styles.css.map */
