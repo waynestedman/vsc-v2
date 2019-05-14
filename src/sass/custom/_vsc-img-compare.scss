@@ -51,12 +51,12 @@
     min-height: 224px;
   }
   .img-comp-img {
-    width: inherit !important;
+    // width: inherit !important;
   }
   .img-comp-img img {
     min-width: 330px;
-    max-width: 530px;
-    width: inherit;
+    max-width: 330px;
+    // width: inherit;
   }
   #slider-wrapper {
     padding-top: 42px;
@@ -70,3 +70,14 @@
     margin-top: 0;
   }
 } // mobile exceptions < 650px
+@media only screen and (min-width: 451px) and (max-width: 499px) {
+  .img-comp-img img {
+    max-width: 430px;
+  }
+  #slider-wrapper {
+    padding-top: 35px;
+  }
+  #img-comp-slider {
+    height: 290px;
+  }
+} // min 451 to max 500

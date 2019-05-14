@@ -233,13 +233,9 @@ body {
     width: auto;
     min-height: 224px;
   }
-  .img-comp-img {
-    width: inherit !important;
-  }
   .img-comp-img img {
     min-width: 330px;
-    max-width: 530px;
-    width: inherit;
+    max-width: 330px;
   }
   #slider-wrapper {
     padding-top: 42px;
@@ -251,6 +247,18 @@ body {
   #slider-text {
     font-size: 1.2rem;
     margin-top: 0;
+  }
+}
+
+@media only screen and (min-width: 451px) and (max-width: 499px) {
+  .img-comp-img img {
+    max-width: 430px;
+  }
+  #slider-wrapper {
+    padding-top: 35px;
+  }
+  #img-comp-slider {
+    height: 290px;
   }
 }
 
@@ -673,11 +681,12 @@ body {
     height: auto;
     text-align: center;
     margin-bottom: 0;
+    padding: 0 4%;
   }
   #o-beforeAfter .m-beforeAfter-slider {
     position: relative;
     width: 100%;
-    max-height: 370px;
+    max-height: 250px;
     display: block;
   }
   #o-beforeAfter .m-beforeAfter-text {
@@ -727,6 +736,18 @@ body {
   #o-products .m-primers .m-primer h5 {
     font-size: 1.4rem;
     margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 450px) {
+  #o-beforeAfter {
+    padding: 0 8%;
+  }
+}
+
+@media only screen and (min-width: 451px) and (max-width: 499px) {
+  #o-beforeAfter .m-beforeAfter-slider {
+    max-height: 290px;
   }
 }
 

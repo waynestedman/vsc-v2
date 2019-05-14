@@ -104,14 +104,16 @@
     height: auto;
     text-align: center;
     margin-bottom: 0;
+    padding: 0 4%;
 
     .m-beforeAfter-slider {
       position: relative;
       width: 100%;
       // min-height: 233px;
       // height: 50%;
-      max-height: 370px;
+      max-height: 250px;
       display: block;
+
     } // m-beforeAfter-slider
     .m-beforeAfter-text {
       position: relative;
@@ -171,6 +173,15 @@
 //
 // } // to max 450 - Bigger mobile exceptions
 
-@media only screen and (min-width: 650px) and (max-width: 1024px) {
-
-} // min 650 to max 1024 - Tablet
+@media only screen and (min-width: 400px) and (max-width: 450px) {
+  #o-beforeAfter {
+    padding: 0 8%;
+  }
+} // min 400 to max 450
+@media only screen and (min-width: 451px) and (max-width: 499px) {
+  #o-beforeAfter {
+    .m-beforeAfter-slider {
+      max-height: 290px;
+    }
+  }
+} // min 451 to max 499
